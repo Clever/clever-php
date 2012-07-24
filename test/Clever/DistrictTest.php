@@ -17,7 +17,6 @@ class CleverDistrictTest extends UnitTestCase
       $districtBefore = clone($district);
       $district->refresh();
       $this->assertEqual($districtBefore, $district);
-      print_r($district);
     }
   }
 

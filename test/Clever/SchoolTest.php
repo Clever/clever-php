@@ -17,7 +17,6 @@ class CleverSchoolTest extends UnitTestCase
       $schoolBefore = clone($school);
       $school->refresh();
       $this->assertEqual($schoolBefore, $school);
-      print_r($school);
     }
   }
 

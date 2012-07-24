@@ -3,7 +3,7 @@
 Download the latest version of the Clever PHP library via git:
 
 ```bash
-git clone https://github.com/Clever/cleverphp
+git clone https://github.com/Clever/clever-php
 ```
 
 or click here: [https://github.com/Clever/clever-php/tarball/master](https://github.com/Clever/clever-php/tarball/master).
