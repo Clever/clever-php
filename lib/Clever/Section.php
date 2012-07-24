@@ -31,9 +31,10 @@ class CleverSection extends CleverApiResource
   public function __call($method, $args)
   {
     if (array_key_exists($method, self::$secondLevelEndpoints)) {
+      $params = $args && count($args) ? $args[0] : array();
       $requestor = new CleverApiRequestor($this->_apiKey);
       $url = $this->instanceUrl() . '/' . $method;
-      list($response, $apiKey) = $requestor->request('get', $url, $args[0]);
+      list($response, $apiKey) = $requestor->request('get', $url, $params);
       return CleverUtil::convertToCleverObject($response, $this->_apiKey);
     }
   }
