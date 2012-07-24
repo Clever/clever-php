@@ -1,3 +1,7 @@
+# clever-php
+
+[![Build Status](https://secure.travis-ci.org/Clever/clever-php.png)](http://travis-ci.org/Clever/clever-php)
+
 # Installation
 
 Download the latest version of the Clever PHP library via git:
