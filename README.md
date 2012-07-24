@@ -38,7 +38,7 @@ CleverDistrict::all(); // gets all districts you have access to via your API key
 CleverDistrict::retrieve($id); // gets district with ID $id
 ```
 
-`all()` returns an array of Clever objects, while `retrieve()` returns a single instance. Each Clever object has an additional set of instance methods corresponding to "second-level" information. For example, getting all of the schools, teachers, students, and sections for a district could be done like so:
+`all()` returns an array of Clever objects, while `retrieve()` returns a single instance of an object. Each Clever object has an additional set of instance methods corresponding to "second-level" information. For example, getting all of the schools, teachers, students, and sections for a district could be done like so:
 
 ```php
 $demo_district = CleverDistrict::retrieve("4fd43cc56d11340000000005");
@@ -68,11 +68,10 @@ $events = CleverEvent::all(array('created_since' => '2012-07-23'));
 To page through a lot of data you could do something along the lines of:
 
 ```php
-$students = CleverStudents::all();
-for ($page = 1; count($students); $page++) {
-  // do something with list of students
-  // …
-  $students = CleverStudents::all(array('page' => $page));
+for ($page = 1;
+     count($students = CleverStudent::all(array('page' => $page)));
+     $page++) {
+  print_r($students);
 }
 ```
 
