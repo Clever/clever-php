@@ -33,7 +33,7 @@ class CleverTeacher extends CleverApiResource
     if (array_key_exists($method, self::$secondLevelEndpoints)) {
       $requestor = new CleverApiRequestor($this->_apiKey);
       $url = $this->instanceUrl() . '/' . $method;
-      list($response, $apiKey) = $requestor->request('get', $url, $params);
+      list($response, $apiKey) = $requestor->request('get', $url, $args[0]);
       return CleverUtil::convertToCleverObject($response, $this->_apiKey);
     }
   }
