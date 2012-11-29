@@ -45,7 +45,7 @@ $demo_district = CleverDistrict::retrieve("4fd43cc56d11340000000005");
 $demo_schools = $demo_district->schools();
 $demo_teachers = $demo_district->teachers();
 $demo_students = $demo_district->students();
-$demo_sections = $demo_district->students();
+$demo_sections = $demo_district->sections();
 ```
 
 The same patterns apply to other Clever objects (CleverSchool, CleverStudent, CleverSection, CleverTeacher, and CleverEvent). Here's an example that gets information about a teacher, all the sections they teach, the school they belong to, and the students they teach:

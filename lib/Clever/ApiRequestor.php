@@ -69,7 +69,7 @@ class CleverApiRequestor
     case 401:
       throw new CleverAuthenticationError(isset($error['message']) ? $error['message'] : null, $rcode, $rbody, $resp);
     case 402:
-      throw new CleverCardError(isset($error['message']) ? $error['message'] : null,
+      throw new CleverInvalidRequest(isset($error['message']) ? $error['message'] : null,
                                  isset($error['param']) ? $error['param'] : null,
                                  isset($error['code']) ? $error['code'] : null,
                                  $rcode, $rbody, $resp);
