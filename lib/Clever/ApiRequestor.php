@@ -43,6 +43,8 @@ class CleverApiRequestor
 
   public static function encode($d)
   {
+    if (isset($d['where']) && is_array($d['where']))
+      $d['where'] = json_encode($d['where']);
     return http_build_query($d, null, '&');
   }
 

@@ -6,6 +6,6 @@
 
 # Tests
 
-* /teachers?grade= and other query params
+* /teachers?grade= and other query params (see CleverQueryParamTest.php)
 * student contacts
 * student photos
