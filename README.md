@@ -75,6 +75,24 @@ for ($page = 1;
 }
 ```
 
+## Composer Support
+
+Composer support has been added,  Place the following lines in your composer.json file.
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/clever/clever-php"
+        }
+    ],
+    "require": {
+    	"clever/clever-php": "*"
+}
+}
+```
+
 ## Feedback
 
 Questions, feature requests, or feedback of any kind is always welcome! We're available at [clever-php@getclever.com](mailto:clever-php@getclever.com).
