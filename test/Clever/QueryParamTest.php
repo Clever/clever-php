@@ -17,4 +17,19 @@ class CleverQueryParamTest extends UnitTestCase
       $this->assertEqual($schools[0]->name, 'Clever Memorial High');
     }
   }
+
+  public function testCount()
+  {
+    authorizeFromEnv();
+
+    $validQueries = array(
+      array('count' => 'true'),
+      array('count' => true),
+    );
+    foreach ($validQueries as $query) {
+      $resp = CleverStudent::all($query);
+      $this->assertEqual($resp['count'] > 0, true);
+    }
+  }
+
 }
