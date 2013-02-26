@@ -47,7 +47,7 @@ abstract class CleverUtil
         array_push($mapped, self::convertToCleverObject($i, $apiKey));
       }
       return $mapped;
-    } else if (is_array($resp) && isset($resp['data'])) {
+    } else if (is_array($resp) && array_key_exists('data', $resp)) {
       if (isset($resp['uri']) && is_string($resp['uri']) &&
           preg_match( '/^\/(\S*)\/(\S+)s\/(\S*)$/', $resp['uri'], $match ) &&
           isset($types[$match[2]])) {
