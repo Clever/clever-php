@@ -41,7 +41,7 @@ abstract class CleverUtil
                    'student' => 'CleverStudent',
                    'section' => 'CleverSection',
                    'event' => 'CleverEvent');
-    if (self::isList($resp['data'])) {
+    if (is_array($resp) && array_key_exists('data', $resp) && self::isList($resp['data'])) {
       $mapped = array();
       foreach ($resp['data'] as $i) {
         array_push($mapped, self::convertToCleverObject($i, $apiKey));
