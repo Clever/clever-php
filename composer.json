@@ -1,0 +1,14 @@
+{
+    "name": "clever/clever-php",
+    "description": "Clever PHP library",
+    "version": "0.1",
+    "homepage": "http://getclever.com/",
+    "require": {
+        "php": ">=5.2"
+    },
+    "autoload": {
+        "classmap": [
+            "lib/Clever.php"
+        ]
+    }
+}
