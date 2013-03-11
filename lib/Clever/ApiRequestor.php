@@ -60,7 +60,7 @@ class CleverApiRequestor
   public function handleApiError($rbody, $rcode, $resp)
   {
     if (!is_array($resp) || !isset($resp['error']))
-      throw new CleverApiError("Invalid response object from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody, $resp);
+      throw new CleverError("Invalid response object from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody, $resp);
     $error = $resp['error'];
     switch ($rcode) {
     case 400:
@@ -76,7 +76,7 @@ class CleverApiRequestor
                                  isset($error['code']) ? $error['code'] : null,
                                  $rcode, $rbody, $resp);
     default:
-      throw new CleverApiError(isset($error['message']) ? $error['message'] : null, $rcode, $rbody, $resp);
+      throw new CleverError(isset($error['message']) ? $error['message'] : null, $rcode, $rbody, $resp);
     }
   }
 
@@ -108,7 +108,7 @@ class CleverApiRequestor
     try {
       $resp = json_decode($rbody, true);
     } catch (Exception $e) {
-      throw new CleverApiError("Invalid response body from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody);
+      throw new CleverError("Invalid response body from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody);
     }
 
     if ($rcode < 200 || $rcode >= 300) {
@@ -138,7 +138,7 @@ class CleverApiRequestor
         $absUrl = "$absUrl?$encoded";
       }
     } else {
-      throw new CleverApiError("Unrecognized method $meth");
+      throw new CleverError("Unrecognized method $meth");
     }
 
     $absUrl = self::utf8($absUrl);
@@ -197,6 +197,6 @@ class CleverApiRequestor
     }
 
     $msg .= "\n\n(Network error [errno $errno]: $message)";
-    throw new CleverApiConnectionError($msg);
+    throw new CleverError($msg);
   }
 }
