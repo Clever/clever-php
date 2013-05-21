@@ -20,11 +20,18 @@ class CleverDistrictTest extends UnitTestCase
     }
   }
 
+  public function testAllLimit()
+  {
+    authorizeFromEnv();
+    $districts = CleverDistrict::all(array("limit"=>1));
+    $this->assertEqual(count($districts),1);
+  }
+
   public function testSecondLevel()
   {
     $districts = CleverDistrict::all(array('limit'=>1));
     $district = $districts[0];
-    $secondLevelTests = array('schools' => 'CleverSchool',
+    $secondLevelTests = array('schools'  => 'CleverSchool',
                               'teachers' => 'CleverTeacher',
                               'students' => 'CleverStudent',
                               'sections' => 'CleverSection');
