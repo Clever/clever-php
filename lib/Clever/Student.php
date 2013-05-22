@@ -26,7 +26,8 @@ class CleverStudent extends CleverApiResource
     self::$secondLevelEndpoints = array('sections' => array(),
                                         'school' => array(),
                                         'district' => array(),
-                                        'teachers' => array());
+                                        'teachers' => array(),
+                                        'events' => array());
   }
   public function __call($method, $args)
   {

@@ -43,4 +43,18 @@ class CleverSchoolTest extends UnitTestCase
       }
     }
   }
+
+  public function testEvents()
+  {
+    $schools = CleverSchool::all(array('limit'=>1));
+    $school = $schools[0];
+    $secondLevelTests = array('events' => 'CleverEvent');
+    foreach ($secondLevelTests as $k => $v) {
+      $objs = $school->$k();
+      foreach ($objs as $obj) {
+        $this->assertEqual(get_class($obj), $v);
+        $this->assertEqual($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
+      }
+    }
+  }
 }

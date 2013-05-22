@@ -32,7 +32,7 @@ class CleverTeacherTest extends UnitTestCase
     $teachers = CleverTeacher::all(array('limit'=>1));
     $teacher = $teachers[0];
     $secondLevelTests = array('sections' => 'CleverSection',
-                              'school' => 'CleverSchool',
+                              'school'   => 'CleverSchool',
                               'district' => 'CleverDistrict',
                               'students' => 'CleverStudent');
     foreach ($secondLevelTests as $k => $v) {
@@ -40,6 +40,20 @@ class CleverTeacherTest extends UnitTestCase
       foreach ($objs as $obj) {
         $this->assertEqual(get_class($obj), $v);
         $this->assertEqual($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
+      }
+    }
+  }
+
+  public function testEvents()
+  {
+    $teachers = CleverTeacher::all(array('limit'=>1));
+    $teacher = $teachers[0];
+    $secondLevelTests = array('events' => 'CleverEvent');
+    foreach ($secondLevelTests as $k => $v) {
+      $objs = $teacher->$k();
+      foreach ($objs as $obj) {
+        $this->assertEqual(get_class($obj), $v);
+        $this->assertEqual($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
       }
     }
   }

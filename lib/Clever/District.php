@@ -23,10 +23,11 @@ class CleverDistrict extends CleverApiResource
   private static $secondLevelEndpoints;
   public static function init()
   {
-    self::$secondLevelEndpoints = array('schools' => array(),
+    self::$secondLevelEndpoints = array('schools'  => array(),
                                         'teachers' => array(),
                                         'students' => array(),
-                                        'sections' => array());
+                                        'sections' => array(),
+                                        'events'   => array());
   }
   public function __call($method, $args)
   {

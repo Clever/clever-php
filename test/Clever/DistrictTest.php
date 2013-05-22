@@ -43,4 +43,18 @@ class CleverDistrictTest extends UnitTestCase
       }
     }
   }
+
+  public function testEvents()
+  {
+    $districts = CleverDistrict::all(array('limit'=>1));
+    $district = $districts[0];
+    $secondLevelTests = array('events' => 'CleverEvent');
+    foreach ($secondLevelTests as $k => $v) {
+      $objs = $district->$k();
+      foreach ($objs as $obj) {
+        $this->assertEqual(get_class($obj), $v);
+        $this->assertEqual($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
+      }
+    }
+  }
 }
