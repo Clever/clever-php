@@ -31,15 +31,20 @@ class CleverSectionTest extends UnitTestCase
   {
     $sections = CleverSection::all(array('limit'=>1));
     $section = $sections[0];
-    $secondLevelTests = array('school' => 'CleverSchool',
+    $secondLevelTests = array('school'   => 'CleverSchool',
                               'district' => 'CleverDistrict',
                               'students' => 'CleverStudent',
-                              'teacher' => 'CleverTeacher');
+                              'teacher'  => 'CleverTeacher',
+                              'events'   => 'CleverEvent');
     foreach ($secondLevelTests as $k => $v) {
       $objs = $section->$k();
       foreach ($objs as $obj) {
         $this->assertEqual(get_class($obj), $v);
-        $this->assertEqual($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
+        if ($k != "events") {
+          $this->assertEqual($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
+        } else {
+          $this->assertEqual($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
+        }
       }
     }
   }
