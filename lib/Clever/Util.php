@@ -33,7 +33,7 @@ abstract class CleverUtil
     return $results;
   }
 
-  public static function convertToCleverObject($resp, $apiKey)
+  public static function convertToCleverObject($resp, $auth)
   {
     $types = array('district' => 'CleverDistrict',
                    'school' => 'CleverSchool',
@@ -44,7 +44,7 @@ abstract class CleverUtil
     if (is_array($resp) && array_key_exists('data', $resp) && self::isList($resp['data'])) {
       $mapped = array();
       foreach ($resp['data'] as $i) {
-        array_push($mapped, self::convertToCleverObject($i, $apiKey));
+        array_push($mapped, self::convertToCleverObject($i, $auth));
       }
       return $mapped;
     } else if (is_array($resp) && array_key_exists('data', $resp)) {
@@ -55,7 +55,7 @@ abstract class CleverUtil
       } else {
         $class = 'CleverObject';
       }
-      return CleverObject::scopedConstructFrom($class, $resp['data'], $apiKey);
+      return CleverObject::scopedConstructFrom($class, $resp['data'], $auth);
     } else {
       return $resp;
     }
