@@ -15,7 +15,7 @@ abstract class Clever
   public static $auth = array();
   public static $apiBase = 'https://api.getclever.com/v1.1';
   public static $verifySslCerts = true;
-  const VERSION = '1.0.0';
+  const VERSION = '1.1.0';
 
   public static function getApiKey() {
     return isset(self::$auth['apiKey']) ? self::$auth['apiKey'] : null;
