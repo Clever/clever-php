@@ -2,19 +2,19 @@
 
 abstract class CleverApiResource extends CleverObject
 {
-  protected static function _scopedRetrieve($class, $id, $apiKey=null)
+  protected static function _scopedRetrieve($class, $id, $auth=null)
   {
-    $instance = new $class($id, $apiKey);
+    $instance = new $class($id, $auth);
     $instance->refresh();
     return $instance;
   }
 
   public function refresh()
   {
-    $requestor = new CleverApiRequestor($this->_apiKey);
+    $requestor = new CleverApiRequestor($this->_auth);
     $url = $this->instanceUrl();
-    list($response, $apiKey) = $requestor->request('get', $url);
-    $this->refreshFrom($response['data'], $apiKey);
+    list($response, $auth) = $requestor->request('get', $url);
+    $this->refreshFrom($response['data'], $auth);
     return $this;
    }
 
@@ -44,39 +44,43 @@ abstract class CleverApiResource extends CleverObject
     return "$base/$extn";
   }
 
-  private static function _validateCall($method, $params=null, $apiKey=null)
+  private static function _validateCall($method, $params=null, $auth=null)
   {
     if ($params && !is_array($params))
       throw new CleverError("You must pass an array as the first argument to Clever API method calls.");
-    if ($apiKey && !is_string($apiKey))
-      throw new CleverError('The second argument to Clever API method calls is an optional per-request apiKey, which must be a string.');
+    if ($auth) {
+      if (!is_array($auth))
+        throw new CleverError('The second argument to Clever API method calls is an optional per-request auth array, which must be an array.');
+      else if (!isset($auth['apiKey']) && !isset($auth['token']))
+        throw new CleverError('The auth argument to Clever API method calls, if specified, must have either an "apiKey" or "token" field.');
+    }
   }
 
-  protected static function _scopedAll($class, $params=null, $apiKey=null)
+  protected static function _scopedAll($class, $params=null, $auth=null)
   {
-    self::_validateCall('all', $params, $apiKey);
-    $requestor = new CleverApiRequestor($apiKey);
+    self::_validateCall('all', $params, $auth);
+    $requestor = new CleverApiRequestor($auth);
     $url = self::classUrl($class);
-    list($response, $apiKey) = $requestor->request('get', $url, $params);
-    return CleverUtil::convertToCleverObject($response, $apiKey);
+    list($response, $auth) = $requestor->request('get', $url, $params);
+    return CleverUtil::convertToCleverObject($response, $auth);
   }
 
-  protected static function _scopedCreate($class, $params=null, $apiKey=null)
+  protected static function _scopedCreate($class, $params=null, $auth=null)
   {
-    self::_validateCall('create', $params, $apiKey);
-    $requestor = new CleverApiRequestor($apiKey);
+    self::_validateCall('create', $params, $auth);
+    $requestor = new CleverApiRequestor($auth);
     $url = self::classUrl($class);
-    list($response, $apiKey) = $requestor->request('post', $url, $params);
-    return CleverUtil::convertToCleverObject($response, $apiKey);
+    list($response, $auth) = $requestor->request('post', $url, $params);
+    return CleverUtil::convertToCleverObject($response, $auth);
   }
 
   protected function _scopedDelete($class, $params=null)
   {
     self::_validateCall('delete');
-    $requestor = new CleverApiRequestor($this->_apiKey);
+    $requestor = new CleverApiRequestor($this->_auth);
     $url = $this->instanceUrl();
-    list($response, $apiKey) = $requestor->request('delete', $url, $params);
-    //$this->refreshFrom($response, $apiKey);
+    list($response, $auth) = $requestor->request('delete', $url, $params);
+    //$this->refreshFrom($response, $auth);
     return $this;
   }
 }

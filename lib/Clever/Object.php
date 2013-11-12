@@ -5,15 +5,15 @@ class CleverObject implements ArrayAccess
   public static $_permanentAttributes;
   public static function init()
   {
-    self::$_permanentAttributes = new CleverSet(array('_apiKey'));
+    self::$_permanentAttributes = new CleverSet(array('_auth'));
   }
 
-  protected $_apiKey;
+  protected $_auth;
   protected $_values;
 
-  public function __construct($id=null, $apiKey=null)
+  public function __construct($id=null, $auth=null)
   {
-    $this->_apiKey = $apiKey;
+    $this->_auth = $auth;
     $this->_values = array();
     if ($id)
       $this->id = $id;
@@ -62,22 +62,22 @@ class CleverObject implements ArrayAccess
   }
 
   // This unfortunately needs to be public to be used in Util.php
-  public static function scopedConstructFrom($class, $values, $apiKey=null)
+  public static function scopedConstructFrom($class, $values, $auth=null)
   {
-    $obj = new $class(isset($values['id']) ? $values['id'] : null, $apiKey);
-    $obj->refreshFrom($values, $apiKey);
+    $obj = new $class(isset($values['id']) ? $values['id'] : null, $auth);
+    $obj->refreshFrom($values, $auth);
     return $obj;
   }
 
-  public static function constructFrom($values, $apiKey=null)
+  public static function constructFrom($values, $auth=null)
   {
     $class = get_class();
-    return self::scopedConstructFrom($class, $values, $apiKey);
+    return self::scopedConstructFrom($class, $values, $auth);
   }
 
-  public function refreshFrom($values, $apiKey, $partial=false)
+  public function refreshFrom($values, $auth, $partial=false)
   {
-    $this->_apiKey = $apiKey;
+    $this->_auth = $auth;
 
     // Wipe old state before setting new
     if ($partial)

@@ -12,13 +12,24 @@ if (!function_exists('json_decode')) {
 
 abstract class Clever
 {
-  public static $apiKey;
+  public static $auth = array();
   public static $apiBase = 'https://api.getclever.com/v1.1';
   public static $verifySslCerts = true;
-  const VERSION = '1.0.0';
+  const VERSION = '1.1.0';
 
-  public static function getApiKey() { return self::$apiKey; }
-  public static function setApiKey($apiKey) { self::$apiKey = $apiKey; }
+  public static function getApiKey() {
+    return isset(self::$auth['apiKey']) ? self::$auth['apiKey'] : null;
+  }
+  public static function setApiKey($apiKey) {
+    self::$auth['apiKey'] = $apiKey;
+  }
+
+  public static function getToken() {
+    return isset(self::$auth['token']) ? self::$auth['token'] : null;
+  }
+  public static function setToken($token) {
+    self::$auth['token'] = $token;
+  }
 
   public static function getVerifySslCerts() { return self::$verifySslCerts; }
   public static function setVerifySslCerts($verify) { self::$verifySslCerts = $verify; }

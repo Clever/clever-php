@@ -34,3 +34,4 @@ require_once(dirname(__FILE__) . '/Clever/StudentTest.php');
 require_once(dirname(__FILE__) . '/Clever/SectionTest.php');
 require_once(dirname(__FILE__) . '/Clever/EventTest.php');
 require_once(dirname(__FILE__) . '/Clever/QueryParamTest.php');
+require_once(dirname(__FILE__) . '/Clever/TokenTest.php');
