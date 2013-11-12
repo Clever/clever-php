@@ -150,7 +150,7 @@ class CleverApiRequestor
     if (isset($auth['apiKey'])) {
         $opts[CURLOPT_USERPWD] = $auth['apiKey'] . ":";
     } else if (isset($auth['token'])) {
-        $headers['Authorization'] = "Bearer " . $auth['token'];
+        array_push($headers, 'Authorization: Bearer ' . $auth['token']);
     }
     $opts[CURLOPT_HTTPHEADER] = $headers;
     if (!Clever::$verifySslCerts)
