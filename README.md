@@ -19,7 +19,18 @@ To get started, add the following to your PHP script:
 
 ```php
 require_once("/path/to/clever-php/lib/Clever.php");
+```
+
+To authenticate using your API key:
+
+```
 Clever::setApiKey("YOUR_API_KEY");
+```
+
+If you're authenticating using an oauth token, call `setToken` instead:
+
+```
+Clever::setToken("TOKEN_STRING");
 ```
 
 Once you've included Clever.php and set your API key, you can begin using the objects provided by the SDK:
