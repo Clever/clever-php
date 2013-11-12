@@ -2,11 +2,11 @@
 
 class CleverApiRequestor
 {
-  public $apiKey;
+  public $auth;
 
-  public function __construct($apiKey=null)
+  public function __construct($auth=null)
   {
-    $this->_apiKey = $apiKey;
+    $this->_auth = $auth;
   }
 
   public static function apiUrl($url='')
@@ -52,9 +52,9 @@ class CleverApiRequestor
   {
     if (!$params)
       $params = array();
-    list($rbody, $rcode, $myApiKey) = $this->_requestRaw($meth, $url, $params);
+    list($rbody, $rcode, $myAuth) = $this->_requestRaw($meth, $url, $params);
     $resp = $this->_interpretResponse($rbody, $rcode);
-    return array($resp, $myApiKey);
+    return array($resp, $myAuth);
   }
 
   public function handleApiError($rbody, $rcode, $resp)
@@ -82,11 +82,11 @@ class CleverApiRequestor
 
   private function _requestRaw($meth, $url, $params)
   {
-    $myApiKey = $this->_apiKey;
-    if (!$myApiKey)
-      $myApiKey = Clever::$apiKey;
-    if (!$myApiKey)
-      throw new CleverAuthenticationError('No API key provided.  (HINT: set your API key using "Clever::setApiKey(<API-KEY>)".');
+    $myAuth = $this->_auth;
+    if (!$myAuth)
+      $myAuth = Clever::$auth;
+    if (!$myAuth)
+      throw new CleverAuthenticationError('No API key or token provided. (HINT: set your API key using "Clever::setApiKey(<API-KEY>)".');
 
     $absUrl = $this->apiUrl($url);
     $params = self::_encodeObjects($params);
@@ -99,8 +99,8 @@ class CleverApiRequestor
                 'uname' => $uname);
     $headers = array('X-Clever-Client-User-Agent: ' . json_encode($ua),
                      'User-Agent: Clever/PhpBindings/' . Clever::VERSION);
-    list($rbody, $rcode) = $this->_curlRequest($meth, $absUrl, $headers, $params, $myApiKey);
-    return array($rbody, $rcode, $myApiKey);
+    list($rbody, $rcode) = $this->_curlRequest($meth, $absUrl, $headers, $params, $myAuth);
+    return array($rbody, $rcode, $myAuth);
   }
 
   private function _interpretResponse($rbody, $rcode)
@@ -117,7 +117,7 @@ class CleverApiRequestor
     return $resp;
   }
 
-  private function _curlRequest($meth, $absUrl, $headers, $params, $apiKey)
+  private function _curlRequest($meth, $absUrl, $headers, $params, $auth)
   {
     $curl = curl_init();
     $meth = strtolower($meth);
@@ -147,7 +147,11 @@ class CleverApiRequestor
     $opts[CURLOPT_CONNECTTIMEOUT] = 30;
     $opts[CURLOPT_TIMEOUT] = 80;
     $opts[CURLOPT_RETURNTRANSFER] = true;
-    $opts[CURLOPT_USERPWD] = $apiKey . ":";
+    if (isset($auth['apiKey'])) {
+        $opts[CURLOPT_USERPWD] = $auth['apiKey'] . ":";
+    } else if (isset($auth['token'])) {
+        $headers['Authorization'] = "Bearer " . $auth['token'];
+    }
     $opts[CURLOPT_HTTPHEADER] = $headers;
     if (!Clever::$verifySslCerts)
       $opts[CURLOPT_SSL_VERIFYPEER] = false;
