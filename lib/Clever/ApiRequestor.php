@@ -59,8 +59,6 @@ class CleverApiRequestor
 
   public function handleApiError($rbody, $rcode, $resp)
   {
-    if (!is_array($resp) || !isset($resp['error']))
-      throw new CleverError("Invalid response object from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody, $resp);
     $error = $resp['error'];
     switch ($rcode) {
     case 400:
