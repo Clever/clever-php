@@ -1,0 +1,15 @@
+image: bradrydzewski/php:5.4
+script:
+  - wget http://downloads.sourceforge.net/project/simpletest/simpletest/simpletest_1.1/simpletest_1.1.0.tar.gz
+  - tar xf simpletest_1.1.0.tar.gz -C test
+  - php test/Clever.php
+notify:
+  email:
+    recipients:
+      - drone@clever.com
+  hipchat:
+    room: Clever-Dev-CI
+    token: {{hipchatToken}}
+    on_started: true
+    on_success: true
+    on_failure: true

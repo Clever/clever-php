@@ -59,8 +59,6 @@ class CleverApiRequestor
 
   public function handleApiError($rbody, $rcode, $resp)
   {
-    if (!is_array($resp) || !isset($resp['error']))
-      throw new CleverError("Invalid response object from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody, $resp);
     $error = $resp['error'];
     switch ($rcode) {
     case 400:
@@ -147,10 +145,10 @@ class CleverApiRequestor
     $opts[CURLOPT_CONNECTTIMEOUT] = 30;
     $opts[CURLOPT_TIMEOUT] = 80;
     $opts[CURLOPT_RETURNTRANSFER] = true;
-    if (isset($auth['apiKey'])) {
-        $opts[CURLOPT_USERPWD] = $auth['apiKey'] . ":";
-    } else if (isset($auth['token'])) {
+    if (isset($auth['token'])) {
         array_push($headers, 'Authorization: Bearer ' . $auth['token']);
+    } else if (isset($auth['apiKey'])) {
+        $opts[CURLOPT_USERPWD] = $auth['apiKey'] . ":";
     }
     $opts[CURLOPT_HTTPHEADER] = $headers;
     if (!Clever::$verifySslCerts)

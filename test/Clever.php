@@ -6,9 +6,9 @@ echo "Running the Clever PHP bindings test suite.\n".
 
 function authorizeFromEnv()
 {
-  $apiKey = getenv('CLEVER_API_KEY');
-  if (!$apiKey) $apiKey = "DEMO_KEY";
-  Clever::setApiKey($apiKey);
+  $apiToken = getenv('CLEVER_API_TOKEN');
+  if (!$apiToken) $apiToken = "DEMO_TOKEN";
+  Clever::setToken($apiToken);
 }
 
 $ok = @include_once(dirname(__FILE__).'/simpletest/autorun.php');

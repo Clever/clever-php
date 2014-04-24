@@ -1,6 +1,6 @@
 # clever-php
 
-[![Build Status](https://secure.travis-ci.org/Clever/clever-php.png)](http://travis-ci.org/Clever/clever-php)
+[![Build Status](https://drone.ops.clever.com/github.com/Clever/clever-php/status.svg?branch=master)](https://drone.ops.clever.com/github.com/Clever/clever-php)
 
 # Installation
 
