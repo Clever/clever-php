@@ -1,5 +1,7 @@
 <?php
 
+use \Psr\Log;
+
 class CleverObject implements ArrayAccess
 {
   public static $_permanentAttributes;
@@ -10,6 +12,7 @@ class CleverObject implements ArrayAccess
 
   protected $_auth;
   protected $_values;
+  protected $logger;
 
   public function __construct($id=null, $auth=null)
   {
@@ -17,6 +20,11 @@ class CleverObject implements ArrayAccess
     $this->_values = array();
     if ($id)
       $this->id = $id;
+
+    $this->logger = \Clever::$logger;
+    if(!($this->logger InstanceOf Log\LoggerInterface)){
+      $this->logger = new Log\NullLogger;
+    }
   }
 
   // standard accessor magic methods
@@ -38,7 +46,7 @@ class CleverObject implements ArrayAccess
       return $this->_values[$k];
     } else {
       $class = get_class($this);
-      error_log("Clever: Undefined property of $class instance: $k");
+      $this->logger->notice("Clever: Undefined property of $class instance: $k");
       return null;
     }
   }
