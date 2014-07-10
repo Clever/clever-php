@@ -80,7 +80,6 @@ class CleverApiRequestor
           "sleep"      => $sleep,
           "iteration"  => $iteration,
           "upperlimit" => $this->upperlimit,
-          "interval"   => $this->interval,
         ));
       }
 
@@ -219,7 +218,6 @@ class CleverApiRequestor
           "sleep"      => $sleep,
           "iteration"  => $iteration,
           "upperlimit" => $this->upperlimit,
-          "interval"   => $this->interval,
         ));
         //retry the request
         $rbody = curl_exec($curl);
