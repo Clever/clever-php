@@ -75,6 +75,7 @@ class CleverApiRequestor
         sleep(($sleep += $this->interval));
         $this->logger->alert("Recieved an API error", array(
           "errno"      => $rcode,
+          "error"      => $rbody,
           "timestamp"  => date("r"),
           "sleep"      => $sleep,
           "iteration"  => $iteration,
@@ -213,6 +214,7 @@ class CleverApiRequestor
         //publish an error
         $this->logger->alert("Recieved a cURL error", array(
           "errno"      => $errno,
+          "error"      => curl_error($curl),
           "timestamp"  => date("r"),
           "sleep"      => $sleep,
           "iteration"  => $iteration,
