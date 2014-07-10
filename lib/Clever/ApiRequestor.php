@@ -68,7 +68,7 @@ class CleverApiRequestor
     $iteration = 0;
     $sleep     = 1;
     // while((curl_errno($curl) != 0 || $limit == 0)){
-    while( (!in_array($rcode, array(200, 400, 401))) && ($iteration < $this->upperlimit)){
+    while( ($rcode != 200) && ($iteration < $this->upperlimit) ){
         //make sure we're only trying a limited amount of times
         ++$iteration;
         //wait for a period of time
