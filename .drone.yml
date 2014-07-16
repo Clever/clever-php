@@ -2,6 +2,8 @@ image: bradrydzewski/php:5.4
 script:
   - wget http://downloads.sourceforge.net/project/simpletest/simpletest/simpletest_1.1/simpletest_1.1.0.tar.gz
   - tar xf simpletest_1.1.0.tar.gz -C test
+  - curl -sS https://getcomposer.org/installer | php
+  - php composer.phar install --prefer-dist --no-interaction --no-progress
   - php test/Clever.php
 notify:
   email:
