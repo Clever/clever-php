@@ -3,7 +3,7 @@
     "description": "Clever PHP library",
     "homepage": "http://getclever.com/",
     "require": {
-        "php"    : ">=5.2",
+        "php"    : ">=5.3",
         "psr/log": "~1.0"
     },
     "require-dev": {
