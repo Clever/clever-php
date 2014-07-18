@@ -1,6 +1,6 @@
 <?php
 
-class CleverQueryParamTest extends UnitTestCase
+class CleverQueryParamTest extends PHPUnit_Framework_TestCase
 {
   public function testWhere()
   {
@@ -13,8 +13,8 @@ class CleverQueryParamTest extends UnitTestCase
     );
     foreach ($validQueries as $query) {
       $schools = CleverSchool::all($query);
-      $this->assertEqual(count($schools), 1);
-      $this->assertEqual($schools[0]->name, 'Clever High School');
+      $this->assertEquals(count($schools), 1);
+      $this->assertEquals($schools[0]->name, 'Clever High School');
     }
   }
 
@@ -28,7 +28,7 @@ class CleverQueryParamTest extends UnitTestCase
     );
     foreach ($validQueries as $query) {
       $resp = CleverStudent::all($query);
-      $this->assertEqual($resp['count'] > 0, true);
+      $this->assertEquals($resp['count'] > 0, true);
     }
   }
 

@@ -1,6 +1,6 @@
 <?php
 
-class CleverInvalidRequestErrorTest extends UnitTestCase
+class CleverInvalidRequestErrorTest extends PHPUnit_Framework_TestCase
 {
   public function testInvalidObject()
   {
@@ -8,7 +8,7 @@ class CleverInvalidRequestErrorTest extends UnitTestCase
     try {
       CleverDistrict::retrieve('invalid');
     } catch (CleverInvalidRequestError $e) {
-      $this->assertEqual(404, $e->getHttpStatus());
+      $this->assertEquals(404, $e->getHttpStatus());
     }
   }
 
@@ -18,7 +18,7 @@ class CleverInvalidRequestErrorTest extends UnitTestCase
     try {
       CleverDistrict::all(array('asdf' => 25));
     } catch (CleverInvalidRequestError $e) {
-      $this->assertEqual(400, $e->getHttpStatus());
+      $this->assertEquals(400, $e->getHttpStatus());
     }
   }
 }

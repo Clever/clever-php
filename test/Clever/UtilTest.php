@@ -1,6 +1,6 @@
 <?php
 
-class CleverUtilTest extends UnitTestCase
+class CleverUtilTest extends PHPUnit_Framework_TestCase
 {
   public function testIsList()
   {
@@ -17,6 +17,6 @@ class CleverUtilTest extends UnitTestCase
     $derived = $original;
     $derived['php-arrays'] = 'reference-semantics';
 
-    $this->assertEqual('value-semantics', $original['php-arrays']);
+    $this->assertEquals('value-semantics', $original['php-arrays']);
   }
 }
