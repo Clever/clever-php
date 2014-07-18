@@ -2,7 +2,7 @@
 
 class CleverApiRequestorTest extends PHPUnit_Framework_TestCase
 {
-  public function test_Encode()
+  public function testEncode()
   {
     $a = array('my' => 'value', 'that' => array('your' => 'example'), 'bar' => 1, 'baz' => null);
     $enc = CleverAPIRequestor::encode($a);
