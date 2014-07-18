@@ -1,6 +1,6 @@
 <?php
 
-// Tested on PHP 5.2, 5.3
+use \Psr\Log;
 
 // This snippet (and some of the curl code) due to the Facebook SDK.
 if (!function_exists('curl_init')) {
@@ -13,6 +13,7 @@ if (!function_exists('json_decode')) {
 abstract class Clever
 {
   public static $auth = array();
+  public static $logger;
   public static $apiBase = 'https://api.getclever.com/v1.1';
   public static $verifySslCerts = true;
   const VERSION = '1.1.0';
@@ -23,7 +24,9 @@ abstract class Clever
   public static function setApiKey($apiKey) {
     self::$auth['apiKey'] = $apiKey;
   }
-
+  public static function setLogger(Log\LoggerInterface $logger) {
+    self::$logger = $logger;
+  }
   public static function getToken() {
     return isset(self::$auth['token']) ? self::$auth['token'] : null;
   }
