@@ -1,5 +1,7 @@
 <?php
 
+use Psr\Log;
+
 class CleverObject implements ArrayAccess
 {
   public static $_permanentAttributes;
