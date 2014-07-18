@@ -1,6 +1,6 @@
 <?php
 
-class CleverTokenTest extends UnitTestCase
+class CleverTokenTest extends PHPUnit_Framework_TestCase
 {
   public function testToken()
   {
@@ -8,11 +8,11 @@ class CleverTokenTest extends UnitTestCase
     Clever::setToken('DEMO_TOKEN');
     $schools = CleverSchool::all();
     foreach ($schools as $school) {
-      $this->assertEqual(get_class($school), "CleverSchool");
-      $this->assertEqual($school->instanceUrl(), "/schools/" . $school->id);
+      $this->assertEquals(get_class($school), "CleverSchool");
+      $this->assertEquals($school->instanceUrl(), "/schools/" . $school->id);
       $schoolBefore = clone($school);
       $school->refresh();
-      $this->assertEqual($schoolBefore, $school);
+      $this->assertEquals($schoolBefore, $school);
     }
   }
 }

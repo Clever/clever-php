@@ -1,10 +1,10 @@
 <?php
 
-class CleverEventTest extends UnitTestCase
+class CleverEventTest extends PHPUnit_Framework_TestCase
 {
   public function testUrl()
   {
-    $this->assertEqual(CleverEvent::classUrl('CleverEvent'), '/push/events');
+    $this->assertEquals(CleverEvent::classUrl('CleverEvent'), '/push/events');
   }
 
   public function testAll()
@@ -12,11 +12,11 @@ class CleverEventTest extends UnitTestCase
     authorizeFromEnv();
     $events = CleverEvent::all();
     foreach ($events as $event) {
-      $this->assertEqual(get_class($event), "CleverEvent");
-      $this->assertEqual($event->instanceUrl(), "/push/events/" . $event->id);
+      $this->assertEquals(get_class($event), "CleverEvent");
+      $this->assertEquals($event->instanceUrl(), "/push/events/" . $event->id);
       $eventBefore = clone($event);
       $event->refresh();
-      $this->assertEqual($eventBefore, $event);
+      $this->assertEquals($eventBefore, $event);
     }
   }
 
@@ -24,7 +24,7 @@ class CleverEventTest extends UnitTestCase
   {
     authorizeFromEnv();
     $events = CleverTeacher::all(array("limit"=>1));
-    $this->assertEqual(count($events),1);
+    $this->assertEquals(count($events),1);
   }
 
   /* todo: second-level uris */

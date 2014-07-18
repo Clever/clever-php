@@ -1,14 +1,14 @@
 <?php
 
-class CleverAuthenticationErrorTest extends UnitTestCase
+class CleverAuthenticationErrorTest extends PHPUnit_Framework_TestCase
 {
-  public function testInvalidCredentials()
+  public function test_InvalidCredentials()
   {
     Clever::setApiKey('invalid');
     try {
       CleverDistrict::all();
     } catch (CleverAuthenticationError $e) {
-      $this->assertEqual(401, $e->getHttpStatus());
+      $this->assertEquals(401, $e->getHttpStatus());
     }
   }
 }

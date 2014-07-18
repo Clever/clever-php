@@ -1,12 +1,12 @@
 <?php
 
-class CleverObjectTest extends UnitTestCase
+class CleverObjectTest extends PHPUnit_Framework_TestCase
 {
   public function testArrayAccessorsSemantics()
   {
     $s = new CleverObject();
     $s['foo'] = 'a';
-    $this->assertEqual($s['foo'], 'a');
+    $this->assertEquals($s['foo'], 'a');
     $this->assertTrue(isset($s['foo']));
     unset($s['foo']);
     $this->assertFalse(isset($s['foo']));
@@ -16,7 +16,7 @@ class CleverObjectTest extends UnitTestCase
   {
     $s = new CleverObject();
     $s->foo = 'a';
-    $this->assertEqual($s->foo, 'a');
+    $this->assertEquals($s->foo, 'a');
     $this->assertTrue(isset($s->foo));
     unset($s->foo);
     $this->assertFalse(isset($s->foo));
@@ -26,10 +26,10 @@ class CleverObjectTest extends UnitTestCase
   {
     $s = new CleverObject();
     $s->foo = 'a';
-    $this->assertEqual($s['foo'], 'a');
+    $this->assertEquals($s['foo'], 'a');
 
     $s['bar'] = 'b';
-    $this->assertEqual($s->bar, 'b');
+    $this->assertEquals($s->bar, 'b');
   }
 
   public function testToString()

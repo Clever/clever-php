@@ -1,15 +1,15 @@
 <?php
 
-class CleverApiRequestorTest extends UnitTestCase
+class CleverApiRequestorTest extends PHPUnit_Framework_TestCase
 {
-  public function testEncode()
+  public function test_Encode()
   {
     $a = array('my' => 'value', 'that' => array('your' => 'example'), 'bar' => 1, 'baz' => null);
     $enc = CleverAPIRequestor::encode($a);
-    $this->assertEqual($enc, 'my=value&that%5Byour%5D=example&bar=1');
+    $this->assertEquals($enc, 'my=value&that%5Byour%5D=example&bar=1');
 
     $a = array('that' => array('your' => 'example', 'foo' => null));
     $enc = CleverAPIRequestor::encode($a);
-    $this->assertEqual($enc, 'that%5Byour%5D=example');
+    $this->assertEquals($enc, 'that%5Byour%5D=example');
   }
 }
