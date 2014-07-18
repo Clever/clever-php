@@ -1,10 +1,10 @@
 <?php
 
-class CleverDistrictTest extends UnitTestCase
+class CleverDistrictTest extends PHPUnit_Framework_TestCase
 {
   public function testUrl()
   {
-    $this->assertEqual(CleverDistrict::classUrl('CleverDistrict'), '/districts');
+    $this->assertEquals(CleverDistrict::classUrl('CleverDistrict'), '/districts');
   }
 
   public function testAll()
@@ -12,11 +12,11 @@ class CleverDistrictTest extends UnitTestCase
     authorizeFromEnv();
     $districts = CleverDistrict::all();
     foreach ($districts as $district) {
-      $this->assertEqual(get_class($district), "CleverDistrict");
-      $this->assertEqual($district->instanceUrl(), "/districts/" . $district->id);
+      $this->assertEquals(get_class($district), "CleverDistrict");
+      $this->assertEquals($district->instanceUrl(), "/districts/" . $district->id);
       $districtBefore = clone($district);
       $district->refresh();
-      $this->assertEqual($districtBefore, $district);
+      $this->assertEquals($districtBefore, $district);
     }
   }
 
@@ -24,7 +24,7 @@ class CleverDistrictTest extends UnitTestCase
   {
     authorizeFromEnv();
     $districts = CleverDistrict::all(array("limit"=>1));
-    $this->assertEqual(count($districts),1);
+    $this->assertEquals(count($districts),1);
   }
 
   public function testSecondLevel()
@@ -39,11 +39,11 @@ class CleverDistrictTest extends UnitTestCase
     foreach ($secondLevelTests as $k => $v) {
       $objs = $district->$k();
       foreach ($objs as $obj) {
-        $this->assertEqual(get_class($obj), $v);
+        $this->assertEquals(get_class($obj), $v);
         if ($k != "events") {
-          $this->assertEqual($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
+          $this->assertEquals($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
         } else {
-          $this->assertEqual($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
+          $this->assertEquals($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
         }
       }
     }

@@ -1,10 +1,10 @@
 <?php
 
-class CleverStudentTest extends UnitTestCase
+class CleverStudentTest extends PHPUnit_Framework_TestCase
 {
   public function testUrl()
   {
-    $this->assertEqual(CleverStudent::classUrl('CleverStudent'), '/students');
+    $this->assertEquals(CleverStudent::classUrl('CleverStudent'), '/students');
   }
 
   public function testAll()
@@ -12,11 +12,11 @@ class CleverStudentTest extends UnitTestCase
     authorizeFromEnv();
     $students = CleverStudent::all();
     foreach ($students as $student) {
-      $this->assertEqual(get_class($student), "CleverStudent");
-      $this->assertEqual($student->instanceUrl(), "/students/" . $student->id);
+      $this->assertEquals(get_class($student), "CleverStudent");
+      $this->assertEquals($student->instanceUrl(), "/students/" . $student->id);
       $studentBefore = clone($student);
       $student->refresh();
-      $this->assertEqual($studentBefore, $student);
+      $this->assertEquals($studentBefore, $student);
     }
   }
 
@@ -24,7 +24,7 @@ class CleverStudentTest extends UnitTestCase
   {
     authorizeFromEnv();
     $students = CleverStudent::all(array("limit"=>1));
-    $this->assertEqual(count($students),1);
+    $this->assertEquals(count($students),1);
   }
 
   public function testSecondLevel()
@@ -39,11 +39,11 @@ class CleverStudentTest extends UnitTestCase
     foreach ($secondLevelTests as $k => $v) {
       $objs = $student->$k();
       foreach ($objs as $obj) {
-        $this->assertEqual(get_class($obj), $v);
+        $this->assertEquals(get_class($obj), $v);
         if ($k != "events") {
-          $this->assertEqual($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
+          $this->assertEquals($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
         } else {
-          $this->assertEqual($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
+          $this->assertEquals($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
         }
       }
     }

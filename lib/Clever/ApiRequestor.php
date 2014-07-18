@@ -1,12 +1,21 @@
 <?php
 
+use \Psr\Log;
+
 class CleverApiRequestor
 {
   public $auth;
 
   public function __construct($auth=null)
   {
-    $this->_auth = $auth;
+    $this->_auth      = $auth;
+    $this->upperlimit = \Clever::$upperlimit;
+    $this->interval   = \Clever::$interval;
+
+    $this->logger = \Clever::$logger;
+    if(!($this->logger InstanceOf Log\LoggerInterface)){
+      $this->logger = new Log\NullLogger;
+    }
   }
 
   public static function apiUrl($url='')
@@ -52,7 +61,28 @@ class CleverApiRequestor
   {
     if (!$params)
       $params = array();
+
     list($rbody, $rcode, $myAuth) = $this->_requestRaw($meth, $url, $params);
+
+    //reset the limit, how many seconds do we wait
+    $iteration = 0;
+    $sleep     = 1;
+    // while((curl_errno($curl) != 0 || $limit == 0)){
+    while( ($rcode != 200) && ($iteration < $this->upperlimit) ){
+        //make sure we're only trying a limited amount of times
+        ++$iteration;
+        //wait for a period of time
+        sleep(($sleep += $this->interval));
+        $this->logger->alert("Recieved an API error", array(
+          "errno"      => $rcode,
+          "error"      => $rbody,
+          "timestamp"  => date("r"),
+          "sleep"      => $sleep,
+          "iteration"  => $iteration,
+          "upperlimit" => $this->upperlimit,
+        ));
+      }
+
     $resp = $this->_interpretResponse($rbody, $rcode);
     return array($resp, $myAuth);
   }
@@ -167,6 +197,30 @@ class CleverApiRequestor
       curl_setopt($curl, CURLOPT_CAINFO,
                   dirname(__FILE__) . '/../data/ca-certificates.crt');
       $rbody = curl_exec($curl);
+    }
+
+    //reset the limit, how many seconds do we wait
+    $iteration = 0;
+    $sleep     = 1;
+    // while((curl_errno($curl) != 0 || $limit == 0)){
+    while( (curl_errno($curl) != 0) && ($iteration < $this->upperlimit) ){
+        //make sure we're only trying a limited amount of times
+        ++$iteration;
+        //wait for a period of time
+        sleep(($sleep += $this->interval));
+        //get the error code
+        $errno = curl_errno($curl);
+        //publish an error
+        $this->logger->alert("Recieved a cURL error", array(
+          "errno"      => $errno,
+          "error"      => curl_error($curl),
+          "timestamp"  => date("r"),
+          "sleep"      => $sleep,
+          "iteration"  => $iteration,
+          "upperlimit" => $this->upperlimit,
+        ));
+        //retry the request
+        $rbody = curl_exec($curl);
     }
 
     if ($rbody === false) {
