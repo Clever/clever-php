@@ -1,10 +1,10 @@
 <?php
 
-class CleverSectionTest extends UnitTestCase
+class CleverSectionTest extends PHPUnit_Framework_TestCase
 {
   public function testUrl()
   {
-    $this->assertEqual(CleverSection::classUrl('CleverSection'), '/sections');
+    $this->assertEquals(CleverSection::classUrl('CleverSection'), '/sections');
   }
 
   public function testAll()
@@ -12,11 +12,11 @@ class CleverSectionTest extends UnitTestCase
     authorizeFromEnv();
     $sections = CleverSection::all();
     foreach ($sections as $section) {
-      $this->assertEqual(get_class($section), "CleverSection");
-      $this->assertEqual($section->instanceUrl(), "/sections/" . $section->id);
+      $this->assertEquals(get_class($section), "CleverSection");
+      $this->assertEquals($section->instanceUrl(), "/sections/" . $section->id);
       $sectionBefore = clone($section);
       $section->refresh();
-      $this->assertEqual($sectionBefore, $section);
+      $this->assertEquals($sectionBefore, $section);
     }
   }
 
@@ -24,7 +24,7 @@ class CleverSectionTest extends UnitTestCase
   {
     authorizeFromEnv();
     $sections = CleverSection::all(array("limit"=>1));
-    $this->assertEqual(count($sections),1);
+    $this->assertEquals(count($sections),1);
   }
 
   public function testSecondLevel()
@@ -39,11 +39,11 @@ class CleverSectionTest extends UnitTestCase
     foreach ($secondLevelTests as $k => $v) {
       $objs = $section->$k();
       foreach ($objs as $obj) {
-        $this->assertEqual(get_class($obj), $v);
+        $this->assertEquals(get_class($obj), $v);
         if ($k != "events") {
-          $this->assertEqual($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
+          $this->assertEquals($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
         } else {
-          $this->assertEqual($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
+          $this->assertEquals($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
         }
       }
     }
