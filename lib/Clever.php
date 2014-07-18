@@ -1,7 +1,5 @@
 <?php
 
-// Tested on PHP 5.2, 5.3
-
 use \Psr\Log;
 
 // This snippet (and some of the curl code) due to the Facebook SDK.
