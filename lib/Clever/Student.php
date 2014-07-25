@@ -27,6 +27,7 @@ class CleverStudent extends CleverApiResource
                                         'school' => array(),
                                         'district' => array(),
                                         'teachers' => array(),
+                                        'contacts' => array(),
                                         'events' => array());
   }
   public function __call($method, $args)
