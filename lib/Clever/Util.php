@@ -52,6 +52,14 @@ abstract class CleverUtil
           preg_match( '/^\/(\S*)\/(\S+)s\/(\S*)$/', $resp['uri'], $match ) &&
           isset($types[$match[2]])) {
         $class = $types[$match[2]];
+      } else if (array_key_exists('links', $resp) && count($resp['links']) > 0) {
+	    $class = 'CleverObject';
+	    foreach ($resp['links'] as $link) {
+		  if ($link['rel'] == 'self' && preg_match( '/^\/(\S*)\/(\S+)s\/(\S*)$/', $link['uri'], $match ) &&
+              isset($types[$match[2]])) {
+            $class = $types[$match[2]];
+          }
+        }
       } else {
         $class = 'CleverObject';
       }
