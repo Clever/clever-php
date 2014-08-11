@@ -68,11 +68,6 @@ class CleverApiRequestor
                                            $rcode, $rbody, $resp);
     case 401:
       throw new CleverAuthenticationError(isset($error['message']) ? $error['message'] : null, $rcode, $rbody, $resp);
-    case 402:
-      throw new CleverInvalidRequest(isset($error['message']) ? $error['message'] : null,
-                                 isset($error['param']) ? $error['param'] : null,
-                                 isset($error['code']) ? $error['code'] : null,
-                                 $rcode, $rbody, $resp);
     default:
       throw new CleverError(isset($error['message']) ? $error['message'] : null, $rcode, $rbody, $resp);
     }
