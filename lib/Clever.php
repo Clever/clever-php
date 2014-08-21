@@ -14,7 +14,7 @@ abstract class Clever
 {
   public static $auth = array();
   public static $logger;
-  public static $apiBase = 'https://api.getclever.com/v1.1';
+  public static $apiBase = 'https://api.clever.com/v1.1';
   public static $verifySslCerts = true;
   const VERSION = '1.1.0';
 

@@ -1,7 +1,7 @@
 {
     "name": "clever/clever-php",
     "description": "Clever PHP library",
-    "homepage": "http://getclever.com/",
+    "homepage": "https://clever.com",
     "require": {
         "php"    : ">=5.3",
         "psr/log": "~1.0"
