@@ -99,10 +99,17 @@ Composer support has been added,  Place the following lines in your composer.jso
         }
     ],
     "require": {
-    	"clever/clever-php": "*"
+       "clever/clever": "*"
 }
 }
 ```
+
+**Note that it is necessary to include the vcs link to be sure that you are pulling from this repo.**
+
+The package manager for composer currently does **not** point to the correct repo for [clever/clever-php](https://packagist.org/packages/clever/clever-php).
+
+We are published as [clever/clever](https://packagist.org/packages/clever/clever).
+
 
 ## Feedback
 

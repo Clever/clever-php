@@ -1,6 +1,6 @@
 {
-    "name": "clever/clever-php",
-    "description": "Clever PHP library",
+    "name": "clever/clever",
+    "description": "Official Clever PHP library",
     "homepage": "https://clever.com",
     "require": {
         "php"    : ">=5.3",
