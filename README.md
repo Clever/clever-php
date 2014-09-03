@@ -113,4 +113,4 @@ We are published as [clever/clever](https://packagist.org/packages/clever/clever
 
 ## Feedback
 
-Questions, feature requests, or feedback of any kind is always welcome! We're available at [clever-php@clever.com](mailto:clever-php@clever.com).
+Questions, feature requests, or feedback of any kind is always welcome! We're available at [tech-support@clever.com](mailto:tech-support@clever.com).
