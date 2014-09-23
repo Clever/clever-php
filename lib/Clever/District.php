@@ -38,6 +38,7 @@ class CleverDistrict extends CleverApiResource
       list($response, $auth) = $requestor->request('get', $url, $params);
       return CleverUtil::convertToCleverObject($response, $this->_auth);
     }
+    throw new UndefinedEndpointException(__CLASS__ . " endpoint '{$method}' is not defined.");
   }
 }
 

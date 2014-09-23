@@ -48,4 +48,14 @@ class CleverTeacherTest extends PHPUnit_Framework_TestCase
       }
     }
   }
+
+  /**
+   * @expectedException UndefinedEndpointException
+   */
+  public function testUndefinedSecondLevel()
+  {
+    $teachers = CleverTeacher::all(array('limit'=>1));
+    $teacher = $teachers[0];
+    $objs = $teacher->eventz();
+  }
 }
