@@ -38,10 +38,11 @@ class CleverSectionTest extends PHPUnit_Framework_TestCase
                               'events'   => 'CleverEvent');
     foreach ($secondLevelTests as $k => $v) {
       $objs = $section->$k();
+      $objs = is_array($objs) ? $objs : array($objs) ;
       foreach ($objs as $obj) {
         $this->assertEquals(get_class($obj), $v);
         if ($k != "events") {
-          $this->assertEquals($obj->instanceUrl(), '/' . $k . '/' . $obj->id);
+          $this->assertEquals($obj->instanceUrl(), '/' . rtrim($k, "s") . 's/' . $obj->id);
         } else {
           $this->assertEquals($obj->instanceUrl(), '/push/' . $k . '/' . $obj->id);
         }
