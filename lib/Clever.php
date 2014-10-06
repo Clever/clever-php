@@ -47,6 +47,7 @@ require(dirname(__FILE__) . '/Clever/Util/Set.php');
 require(dirname(__FILE__) . '/Clever/Error.php');
 require(dirname(__FILE__) . '/Clever/AuthenticationError.php');
 require(dirname(__FILE__) . '/Clever/InvalidRequestError.php');
+require(dirname(__FILE__) . '/Clever/UndefinedEndpointException.php');
 
 // Plumbing
 require(dirname(__FILE__) . '/Clever/Object.php');

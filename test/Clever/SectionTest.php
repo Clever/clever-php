@@ -48,4 +48,14 @@ class CleverSectionTest extends PHPUnit_Framework_TestCase
       }
     }
   }
+
+  /**
+   * @expectedException UndefinedEndpointException
+   */
+  public function testUndefinedSecondLevel()
+  {
+    $sections = CleverSection::all(array('limit'=>1));
+    $section = $sections[0];
+    $objs = $section->eventz();
+  }
 }
