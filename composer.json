@@ -1,6 +1,6 @@
 {
-    "name": "fixedd/clever-php",
-    "description": "fixedd's version of the Clever PHP library",
+    "name": "digedu/clever-php",
+    "description": "digedu's version of the Clever PHP library",
     "require": {
         "php"    : ">=5.3",
         "psr/log": "~1.0"
