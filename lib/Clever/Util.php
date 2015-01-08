@@ -2,6 +2,17 @@
 
 abstract class CleverUtil
 {
+
+  /**
+  * Determine that a variable can be iterated on
+  *
+  * @return bool
+  */
+  public static function isIterable($var)
+  {
+    return $var !== null && (is_array($var) || $var instanceof Traversable || $var instanceof Iterator || $var instanceof IteratorAggregate);
+  }
+
   public static function isList($array)
   {
     if (!is_array($array))

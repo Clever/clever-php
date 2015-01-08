@@ -1,6 +1,6 @@
 <?php
 
-class CleverSet
+class CleverSet implements IteratorAggregate
 {
   private $_elts;
 
@@ -26,9 +26,13 @@ class CleverSet
     unset($this->_elts[$elt]);
   }
 
-  // TODO: make Set support foreach
   public function toArray()
   {
     return array_keys($this->_elts);
+  }
+
+  public function getIterator()
+  {
+    return new ArrayIterator($this->toArray());
   }
 }

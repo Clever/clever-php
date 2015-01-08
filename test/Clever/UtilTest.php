@@ -11,6 +11,14 @@ class CleverUtilTest extends PHPUnit_Framework_TestCase
     $this->assertFalse(CleverUtil::isList($notlist));
   }
 
+  public function testIsIterable()
+  {
+    $exception = new Exception();
+    $array = array("one", "two", "three");
+    $this->assertFalse(CleverUtil::isIterable($exception));
+    $this->assertTrue(CleverUtil::isIterable($array));
+  }
+
   public function testThatPHPHasValueSemanticsForArrays()
   {
     $original = array('php-arrays' => 'value-semantics');
