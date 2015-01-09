@@ -14,7 +14,7 @@ abstract class Clever
 {
   public static $auth = array();
   public static $logger;
-  public static $apiBase = 'https://api.getclever.com/v1.1';
+  public static $apiBase = 'https://api.clever.com/v1.1';
   public static $verifySslCerts = true;
   const VERSION = '1.1.0';
 
@@ -47,6 +47,7 @@ require(dirname(__FILE__) . '/Clever/Util/Set.php');
 require(dirname(__FILE__) . '/Clever/Error.php');
 require(dirname(__FILE__) . '/Clever/AuthenticationError.php');
 require(dirname(__FILE__) . '/Clever/InvalidRequestError.php');
+require(dirname(__FILE__) . '/Clever/UndefinedEndpointException.php');
 
 // Plumbing
 require(dirname(__FILE__) . '/Clever/Object.php');

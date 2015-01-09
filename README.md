@@ -42,7 +42,7 @@ Once you've included Clever.php and set your API key, you can begin using the ob
 * CleverTeacher
 * CleverEvent
 
-These objects correspond directly with the endpoints of the [REST API](https://getclever.com/developers/docs), and expose the exact same functionality via the class methods `all()` and `retrieve()`:
+These objects correspond directly with the endpoints of the [REST API](https://clever.com/developers/docs), and expose the exact same functionality via the class methods `all()` and `retrieve()`:
 
 ```php
 CleverDistrict::all(); // gets all districts you have access to via your API key.
@@ -99,11 +99,18 @@ Composer support has been added,  Place the following lines in your composer.jso
         }
     ],
     "require": {
-    	"clever/clever-php": "*"
+       "clever/clever": "*"
 }
 }
 ```
 
+**Note that it is necessary to include the vcs link to be sure that you are pulling from this repo.**
+
+The package manager for composer currently does **not** point to the correct repo for [clever/clever-php](https://packagist.org/packages/clever/clever-php).
+
+We are published as [clever/clever](https://packagist.org/packages/clever/clever).
+
+
 ## Feedback
 
-Questions, feature requests, or feedback of any kind is always welcome! We're available at [clever-php@getclever.com](mailto:clever-php@getclever.com).
+Questions, feature requests, or feedback of any kind is always welcome! We're available at [tech-support@clever.com](mailto:tech-support@clever.com).

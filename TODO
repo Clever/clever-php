@@ -1,11 +1,8 @@
 # Functionality
 
 * student contacts
-* student photos
-* webhooks (GET, POST, DELETE), handling our notifications
 
 # Tests
 
 * /teachers?grade= and other query params (see CleverQueryParamTest.php)
 * student contacts
-* student photos

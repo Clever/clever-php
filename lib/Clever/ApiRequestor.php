@@ -234,10 +234,10 @@ class CleverApiRequestor
       break;
     case CURLE_SSL_CACERT:
     case CURLE_SSL_PEER_CERTIFICATE:
-      $msg = "Could not verify Clever's SSL certificate.  Please make sure that your network is not intercepting certificates.  (Try going to $apiBase in your browser.)  If this problem persists, let us know at support@getclever.com.";
+      $msg = "Could not verify Clever's SSL certificate.  Please make sure that your network is not intercepting certificates.  (Try going to $apiBase in your browser.)  If this problem persists, let us know at support@clever.com.";
       break;
     default:
-      $msg = "Unexpected error communicating with Clever.  If this problem persists, let us know at support@getclever.com.";
+      $msg = "Unexpected error communicating with Clever.  If this problem persists, let us know at support@clever.com.";
     }
 
     $msg .= "\n\n(Network error [errno $errno]: $message)";

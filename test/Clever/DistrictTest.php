@@ -48,4 +48,14 @@ class CleverDistrictTest extends PHPUnit_Framework_TestCase
       }
     }
   }
+
+  /**
+   * @expectedException UndefinedEndpointException
+   */
+  public function testUndefinedSecondLevel()
+  {
+    $districts = CleverDistrict::all(array('limit'=>1));
+    $district = $districts[0];
+    $objs = $district->eventz();
+  }
 }
