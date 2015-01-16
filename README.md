@@ -70,21 +70,33 @@ $teacher_students = $teacher->students();
 
 ## Query Parameters
 
-Most API requests allow query parameters for purposes like paging and filtering. The same can be done in the PHP library by passing the `all()` method an associative array of parameters. For example, to see what data has changed since July 23rd, you could run:
+Most API requests allow query parameters for purposes like paging and filtering. The same can be done in the PHP library by passing the `all()` method an associative array of parameters. For example, to retrieve the last Event from the Events API, you could run:
 
 ```php
-$events = CleverEvent::all(array('created_since' => '2012-07-23'));
+$events = CleverEvent::all(array('ending_before' => 'last', 'limit' => 1));
 ```
 
-To page through a lot of data you could do something along the lines of:
+To cursor through larger data sets, capture the last ID of an object in a set, and use it as the `starting_after` value for a subsequent request.
 
 ```php
-for ($page = 1;
-     count($students = CleverStudent::all(array('page' => $page)));
-     $page++) {
-  print_r($students);
-}
+$schools = CleverSchool::all(array('limit' => 1)); # page "one"
+$last_school = $schools[count($schools)-1];
+do {
+  # retrieve page "two" and beyond
+  $more_schools = CleverSchool::all(array('limit' => 1, 'starting_after' => $last_school->id));
+  if(count($more_schools) > 0) {
+    $schools = array_merge($schools, $more_schools);
+    $last_school = $more_schools[count($more_schools)-1];
+  } else {
+    $last_school = NULL;
+  }
+} while($last_school);
+print_r($schools); # Print all the schools retrieved.
 ```
+
+To cursor to a previous page, use the first ID of each set as the `ending_before` value.
+
+Unfortunately, paginating via relative links is not yet supported by clever-php.
 
 ## Composer Support
 
