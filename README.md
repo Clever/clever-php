@@ -122,6 +122,21 @@ The package manager for composer currently does **not** point to the correct rep
 
 We are published as [clever/clever](https://packagist.org/packages/clever/clever).
 
+## Testing
+It's easy to run clever-php's tests after obtaining its dependencies.
+
+First install Composer if you have not already:
+```shell
+curl -sS https://getcomposer.org/installer | php
+```
+Then use composer to install dependencies:
+```shell
+php composer.phar install --prefer-dist --no-interaction --no-progress
+```
+And now you can run the tests with phpunit:
+```shell
+./vendor/bin/phpunit
+```
 
 ## Feedback
 
