@@ -21,19 +21,13 @@ To get started, add the following to your PHP script:
 require_once("/path/to/clever-php/lib/Clever.php");
 ```
 
-To authenticate using your API key:
-
-```
-Clever::setApiKey("YOUR_API_KEY");
-```
-
-If you're authenticating using an oauth token, call `setToken` instead:
+To authenticate using your API token, call `setToken`:
 
 ```
 Clever::setToken("TOKEN_STRING");
 ```
 
-Once you've included Clever.php and set your API key, you can begin using the objects provided by the SDK:
+Once you've included Clever.php and set your API token, you can begin using the objects provided by the SDK:
 
 * CleverDistrict
 * CleverSchool
@@ -45,8 +39,8 @@ Once you've included Clever.php and set your API key, you can begin using the ob
 These objects correspond directly with the endpoints of the [REST API](https://clever.com/developers/docs), and expose the exact same functionality via the class methods `all()` and `retrieve()`:
 
 ```php
-CleverDistrict::all(); // gets all districts you have access to via your API key.
-CleverDistrict::retrieve($id); // gets district with ID $id
+CleverSchool::all(); // gets the schools you have access to via your API token.
+CleverSchools::retrieve($id); // gets school with ID $id
 ```
 
 `all()` returns an array of Clever objects, while `retrieve()` returns a single instance of an object. Each Clever object has an additional set of instance methods corresponding to "second-level" information. For example, getting all of the schools, teachers, students, and sections for a district could be done like so:
