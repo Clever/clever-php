@@ -2,6 +2,10 @@
 
 [![Build Status](https://drone.ops.clever.com/github.com/Clever/clever-php/status.svg?branch=master)](https://drone.ops.clever.com/github.com/Clever/clever-php)
 
+# Maintenance
+
+Clever is moving to a community supported model with our client libraries. We will still respond to and merge incoming PRs but are looking to turn over ownership of these libraries to the community. If you are interested, please contact our partner-engineering team at tech-support@clever.com.
+
 # Installation
 
 Download the latest version of the Clever PHP library via git:
