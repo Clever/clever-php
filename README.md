@@ -38,7 +38,9 @@ Once you've included Clever.php and set your API token, you can begin using the 
 * CleverStudent
 * CleverSection
 * CleverTeacher
+* CleverSchoolAdmin
 * CleverEvent
+
 
 These objects correspond directly with the endpoints of the [REST API](https://clever.com/developers/docs), and expose the exact same functionality via the class methods `all()` and `retrieve()`:
 
@@ -57,7 +59,7 @@ $demo_students = $demo_district->students();
 $demo_sections = $demo_district->sections();
 ```
 
-The same patterns apply to other Clever objects (CleverSchool, CleverStudent, CleverSection, CleverTeacher, and CleverEvent). Here's an example that gets information about a teacher, all the sections they teach, the school they belong to, and the students they teach:
+The same patterns apply to other Clever objects (CleverSchool, CleverStudent, CleverSection, CleverTeacher, CleverSchoolAdmin, and CleverEvent). Here's an example that gets information about a teacher, all the sections they teach, the school they belong to, and the students they teach:
 
 ```php
 $teacher = CleverTeacher::retrieve("4fee004dca2e43cf270007d5");
