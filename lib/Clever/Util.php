@@ -40,7 +40,8 @@ abstract class CleverUtil
                    'teacher' => 'CleverTeacher',
                    'student' => 'CleverStudent',
                    'section' => 'CleverSection',
-                   'event' => 'CleverEvent');
+                   'event' => 'CleverEvent',
+                   'school_admin' => 'CleverSchoolAdmin');
     if (is_array($resp) && array_key_exists('data', $resp) && self::isList($resp['data'])) {
       $mapped = array();
       foreach ($resp['data'] as $i) {

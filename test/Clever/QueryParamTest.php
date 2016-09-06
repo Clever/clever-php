@@ -7,14 +7,14 @@ class CleverQueryParamTest extends PHPUnit_Framework_TestCase
     authorizeFromEnv();
 
     $validQueries = array(
-      array('where' => json_encode(array('name' => 'City High School'))),
+      array('where' => json_encode(array('name' => 'Clever High School'))),
       array('where' => '{"name": {"$regex": "High"}}'),
-      array('where' => array('name' => 'City High School'))
+      array('where' => array('name' => 'Clever High School'))
     );
     foreach ($validQueries as $query) {
       $schools = CleverSchool::all($query);
       $this->assertEquals(count($schools), 1);
-      $this->assertEquals($schools[0]->name, 'City High School');
+      $this->assertEquals($schools[0]->name, 'Clever High School');
     }
   }
 
