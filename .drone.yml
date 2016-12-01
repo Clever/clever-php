@@ -1,15 +1,14 @@
 image: clever/drone-php:5.5-wheezy
-script:
-  - curl -sS https://getcomposer.org/installer | php
-  - php composer.phar install --prefer-dist --no-interaction --no-progress
-  - ./vendor/bin/phpunit
 notify:
   email:
     recipients:
-      - drone@clever.com
-  hipchat:
-    room: Clever-Dev-CI
-    token: {{hipchatToken}}
-    on_started: true
-    on_success: true
+    - drone@clever.com
+  slack:
     on_failure: true
+    on_started: false
+    on_success: false
+    webhook_url: $$slack_webhook
+script:
+- curl -sS https://getcomposer.org/installer | php
+- php composer.phar install --prefer-dist --no-interaction --no-progress
+- ./vendor/bin/phpunit
