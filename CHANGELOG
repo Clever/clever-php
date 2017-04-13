@@ -1,0 +1,26 @@
+## 0.6.0 (2017-04-13)
+
+* Supports API v1.2
+
+## 0.5.0 (2017-01-20)
+
+* Last version to support API v1.1
+* Add support for school admins
+* Added the 'contacts' API endpoint to the Student object
+
+## 0.4.0 (2014-10-06)
+
+* Undefined endpoints now throw exceptions
+
+## 0.3.0 (2014-08-26)
+
+* Published name change: clever/clever-php -> clever/clever
+
+## 0.2.0 (2014-04-24)
+
+* Use token authentication rather than API keys
+* Add events endpoints
+
+## 0.1.0 (2013-02-26)
+
+* The first cut!
