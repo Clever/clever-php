@@ -138,6 +138,13 @@ And now you can run the tests with phpunit:
 ./vendor/bin/phpunit
 ```
 
+## Publishing
+
+1. Update CHANGELOG
+1. `git tag -a vX.X.X`
+1. `git push --tags origin HEAD:master`
+1. Log into [Packagist](https://packagist.org/packages/clever/clever) (credentials are in 1PFT) and click "Update"
+
 ## Previous Versions
 
 The current client supports v1.2 of the API. For v1.1 please use:
