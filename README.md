@@ -138,6 +138,12 @@ And now you can run the tests with phpunit:
 ./vendor/bin/phpunit
 ```
 
+## Previous Versions
+
+The current client supports v1.2 of the API. For v1.1 please use:
+
+https://github.com/Clever/clever-php/tree/v0.5.0
+
 ## Feedback
 
 Questions, feature requests, or feedback of any kind is always welcome! We're available at [tech-support@clever.com](mailto:tech-support@clever.com).
