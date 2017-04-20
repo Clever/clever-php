@@ -16,13 +16,47 @@ git clone https://github.com/Clever/clever-php
 
 or click here: [https://github.com/Clever/clever-php/tarball/master](https://github.com/Clever/clever-php/tarball/master).
 
+## Composer Support
+
+Composer support has been added,  Place the following lines in your composer.json file.
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/clever/clever-php"
+        }
+    ],
+    "require": {
+       "clever/clever": "*"
+}
+}
+```
+
+**Note that it is necessary to include the vcs link to be sure that you are pulling from this repo.**
+
+The package manager for composer currently does **not** point to the correct repo for [clever/clever-php](https://packagist.org/packages/clever/clever-php).
+
+We are published as [clever/clever](https://packagist.org/packages/clever/clever).
 
 # Usage
 
-To get started, add the following to your PHP script:
+If you haven't already, install Composer:
+```shell
+curl -sS https://getcomposer.org/installer | php
+```
+
+Then use composer to install dependencies:
+```shell
+php composer.phar install --prefer-dist --no-interaction --no-progress
+```
+
+Then add the following to your PHP script:
 
 ```php
 require_once("/path/to/clever-php/lib/Clever.php");
+require_once('/path/to/clever-php/vendor/autoload.php');
 ```
 
 To authenticate using your API token, call `setToken`:
@@ -97,30 +131,6 @@ print_r($schools); # Print all the schools retrieved.
 To cursor to a previous page, use the first ID of each set as the `ending_before` value.
 
 Unfortunately, paginating via relative links is not yet supported by clever-php.
-
-## Composer Support
-
-Composer support has been added,  Place the following lines in your composer.json file.
-
-```json
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/clever/clever-php"
-        }
-    ],
-    "require": {
-       "clever/clever": "*"
-}
-}
-```
-
-**Note that it is necessary to include the vcs link to be sure that you are pulling from this repo.**
-
-The package manager for composer currently does **not** point to the correct repo for [clever/clever-php](https://packagist.org/packages/clever/clever-php).
-
-We are published as [clever/clever](https://packagist.org/packages/clever/clever).
 
 ## Testing
 It's easy to run clever-php's tests after obtaining its dependencies.
