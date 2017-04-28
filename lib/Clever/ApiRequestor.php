@@ -34,7 +34,18 @@ class CleverApiRequestor
     } else if (is_array($d)) {
       $res = array();
       foreach ($d as $k => $v)
-        $res[$k] = self::_encodeObjects($v);
+        if ($k === 'where') {
+          // We handle where queries differently. For non-where queries we want to
+          // convert booleans to strings for the reasons described here:
+          // http://stackoverflow.com/questions/3181822/php-function-to-build-query-string-from-array-not-http-build-query.
+          // For where queries we don't want to do that because the clever-api will complain.
+          // "The invalid property is: 'string', should be: 'boolean'". So since we're encoding
+          // the json before we pass it to http_build_query we don't need to do anything for where
+          // queries.
+          $res[$k] = $v;
+        } else {
+          $res[$k] = self::_encodeObjects($v);
+        }
       return $res;
     } else {
       return $d;
