@@ -1,3 +1,7 @@
+## 0.6.1 (2017-04-28)
+
+* Fix bug with booleans in where queries
+
 ## 0.6.0 (2017-04-13)
 
 * Supports API v1.2
