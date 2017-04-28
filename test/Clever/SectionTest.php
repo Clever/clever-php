@@ -27,6 +27,14 @@ class CleverSectionTest extends PHPUnit_Framework_TestCase
     $this->assertEquals(count($sections),1);
   }
 
+
+  public function testWhere()
+  {
+    authorizeFromEnv();
+    $sections = CleverSection::all(array("where" => ["teacher" => ['$exists' => true]] ));
+    $this->assertEquals(count($sections),100);
+  }
+
   public function testSecondLevel()
   {
     $sections = CleverSection::all(array('limit'=>1));
