@@ -1,3 +1,7 @@
+## 0.6.2 (2017-05-19)
+
+* Don't use /push/events
+
 ## 0.6.1 (2017-04-28)
 
 * Fix bug with booleans in where queries
