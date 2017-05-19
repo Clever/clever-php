@@ -26,8 +26,6 @@ abstract class CleverApiResource extends CleverObject
     $name = urlencode($class);
     $name = strtolower($name);
     $name = "/${name}s";
-    if (strcmp($name, "/events") == 0)
-      $name = '/push/events';
     if (strcmp($name, "/schooladmins") == 0)
       $name = '/school_admins';
     return $name;
