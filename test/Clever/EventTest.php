@@ -4,7 +4,7 @@ class CleverEventTest extends PHPUnit_Framework_TestCase
 {
   public function testUrl()
   {
-    $this->assertEquals(CleverEvent::classUrl('CleverEvent'), '/push/events');
+    $this->assertEquals(CleverEvent::classUrl('CleverEvent'), '/events');
   }
 
   public function testAll()
