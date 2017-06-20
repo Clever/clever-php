@@ -63,10 +63,55 @@ class CleverApiRequestor
   {
     if (!$params)
       $params = array();
-    list($rbody, $rcode, $myAuth) = $this->_requestRaw($meth, $url, $params);
-    $resp = $this->_interpretResponse($rbody, $rcode);
+
+
+
+
+    $resp = null;
+    //
+    $should_retry = true;
+    $num_tries = 0;
+    while ($should_retry) {
+      try {
+        //
+        $num_tries++;
+
+        list($rbody, $rcode, $myAuth, $headers) = $this->_requestRaw($meth, $url, $params);
+        $resp = $this->_interpretResponse($rbody, $rcode);
+
+        // don't need to rerun
+        $should_retry = false;
+        // reset the interval
+        $this->interval = $this->minInterval;
+      } catch (CleverError $ex) {
+        // if it's an error other than a rate limit error, of if we've failed 7 consecutive calls
+        if ($ex->getHttpStatus() != 429 || $num_tries > 7) {
+            var_dump($rcode);
+            var_dump($rbody);
+            var_dump($resp);
+          throw $ex;
+        }
+
+        // sleep for however long is needed
+        echo "Rate limit exceeded, sleeping {$this->interval} seconds.\n";
+        ob_flush();
+        sleep($this->interval);
+        // bump the interval up to the next higher setting
+        $this->interval = min($this->maxInterval, $this->interval * $this->exponent);
+
+      }
+    }
+
+
+
     return array($resp, $myAuth);
   }
+
+  private $interval = 1;
+  private $minInterval = 1;
+  private $exponent = 2;
+  private $maxInterval = 60;
+
 
   public function handleApiError($rbody, $rcode, $resp)
   {
@@ -103,8 +148,8 @@ class CleverApiRequestor
                 'uname' => $uname);
     $headers = array('X-Clever-Client-User-Agent: ' . json_encode($ua),
                      'User-Agent: Clever/PhpBindings/' . Clever::VERSION);
-    list($rbody, $rcode) = $this->_curlRequest($meth, $absUrl, $headers, $params, $myAuth);
-    return array($rbody, $rcode, $myAuth);
+    list($rbody, $rcode, $headers) = $this->_curlRequest($meth, $absUrl, $headers, $params, $myAuth);
+    return array($rbody, $rcode, $myAuth, $headers);
   }
 
   private function _interpretResponse($rbody, $rcode)
@@ -147,10 +192,10 @@ class CleverApiRequestor
 
     $absUrl = self::utf8($absUrl);
     $opts[CURLOPT_URL] = $absUrl;
-    $opts[CURLOPT_RETURNTRANSFER] = true;
     $opts[CURLOPT_CONNECTTIMEOUT] = 30;
     $opts[CURLOPT_TIMEOUT] = 80;
     $opts[CURLOPT_RETURNTRANSFER] = true;
+    $opts[CURLOPT_HEADER] = 1;
     if (isset($auth['token'])) {
         array_push($headers, 'Authorization: Bearer ' . $auth['token']);
     } else if (isset($auth['apiKey'])) {
@@ -182,9 +227,11 @@ class CleverApiRequestor
       $this->handleCurlError($errno, $message);
     }
 
+    list($headers, $rbody) = explode("\r\n\r\n", $rbody, 2);
+
     $rcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
     curl_close($curl);
-    return array($rbody, $rcode);
+    return array($rbody, $rcode, $headers);
   }
 
   public function handleCurlError($errno, $message)

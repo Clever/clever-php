@@ -1,7 +1,6 @@
 {
-    "name": "clever/clever",
-    "description": "Official Clever PHP library",
-    "homepage": "https://clever.com",
+    "name": "digedu/clever-php",
+    "description": "digedu's version of the Clever PHP library",
     "require": {
         "php"    : ">=5.3",
         "psr/log": "~1.0"
