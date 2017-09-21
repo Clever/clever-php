@@ -293,6 +293,12 @@ class ObjectSerializer
                     $class = $subclass;
                 }
             }
+
+            if (preg_match('/Event$/', $class)) {
+              $instance = new $class();
+              $classstr = str_replace(" ", "", (ucwords(str_replace("."," ",$data->{$instance::attributeMap()['type']}))));
+              $class = '\Clever\Model\\' . $classstr;
+            }
             $instance = new $class();
             foreach ($instance::swaggerTypes() as $property => $type) {
                 $propertySetter = $instance::setters()[$property];
