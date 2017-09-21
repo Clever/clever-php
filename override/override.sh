@@ -5,3 +5,6 @@ rm -rf SwaggerClient-php || true
 # Rename references of swagger client to Clever
 git grep -l 'Swagger\\Client' -- './*' ':(exclude)override/override.sh' | xargs sed -i "" 's/Swagger\\Client/Clever/g'
 git grep -l 'Swagger\\\\Client' -- './*' ':(exclude)override/override.sh' | xargs sed -i "" 's/Swagger\\\\Client/Clever/g'
+
+# Copy override files for events
+cp override/ObjectSerializer.php lib/
