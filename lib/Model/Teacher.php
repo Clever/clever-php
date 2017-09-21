@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Clever
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Clever\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * Teacher Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Clever
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -55,12 +55,12 @@ class Teacher implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'created' => 'string',
-        'credentials' => '\Swagger\Client\Model\Credentials',
+        'credentials' => '\Clever\Model\Credentials',
         'district' => 'string',
         'email' => 'string',
         'id' => 'string',
         'last_modified' => 'string',
-        'name' => '\Swagger\Client\Model\Name',
+        'name' => '\Clever\Model\Name',
         'school' => 'string',
         'schools' => 'string[]',
         'sis_id' => 'string',
@@ -255,7 +255,7 @@ class Teacher implements ArrayAccess
 
     /**
      * Gets credentials
-     * @return \Swagger\Client\Model\Credentials
+     * @return \Clever\Model\Credentials
      */
     public function getCredentials()
     {
@@ -264,7 +264,7 @@ class Teacher implements ArrayAccess
 
     /**
      * Sets credentials
-     * @param \Swagger\Client\Model\Credentials $credentials
+     * @param \Clever\Model\Credentials $credentials
      * @return $this
      */
     public function setCredentials($credentials)
@@ -360,7 +360,7 @@ class Teacher implements ArrayAccess
 
     /**
      * Gets name
-     * @return \Swagger\Client\Model\Name
+     * @return \Clever\Model\Name
      */
     public function getName()
     {
@@ -369,7 +369,7 @@ class Teacher implements ArrayAccess
 
     /**
      * Sets name
-     * @param \Swagger\Client\Model\Name $name
+     * @param \Clever\Model\Name $name
      * @return $this
      */
     public function setName($name)
@@ -556,10 +556,10 @@ class Teacher implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

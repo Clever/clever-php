@@ -1,4 +1,4 @@
-# Swagger\Client\DataApi
+# Clever\DataApi
 
 All URIs are relative to *https://api.clever.com/v1.2*
 
@@ -46,7 +46,7 @@ Method | HTTP request | Description
 
 
 # **getContact**
-> \Swagger\Client\Model\StudentContactResponse getContact($id)
+> \Clever\Model\StudentContactResponse getContact($id)
 
 
 
@@ -58,9 +58,9 @@ Returns a specific student contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentContactResponse**](../Model/StudentContactResponse.md)
+[**\Clever\Model\StudentContactResponse**](../Model/StudentContactResponse.md)
 
 ### Authorization
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContacts**
-> \Swagger\Client\Model\StudentContactsResponse getContacts($limit, $starting_after, $ending_before)
+> \Clever\Model\StudentContactsResponse getContacts($limit, $starting_after, $ending_before)
 
 
 
@@ -106,9 +106,9 @@ Returns a list of student contacts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentContactsResponse**](../Model/StudentContactsResponse.md)
+[**\Clever\Model\StudentContactsResponse**](../Model/StudentContactsResponse.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContactsForStudent**
-> \Swagger\Client\Model\StudentContactsForStudentResponse getContactsForStudent($id, $limit)
+> \Clever\Model\StudentContactsForStudentResponse getContactsForStudent($id, $limit)
 
 
 
@@ -158,9 +158,9 @@ Returns the contacts for a student
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentContactsForStudentResponse**](../Model/StudentContactsForStudentResponse.md)
+[**\Clever\Model\StudentContactsForStudentResponse**](../Model/StudentContactsForStudentResponse.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrict**
-> \Swagger\Client\Model\DistrictResponse getDistrict($id)
+> \Clever\Model\DistrictResponse getDistrict($id)
 
 
 
@@ -208,9 +208,9 @@ Returns a specific district
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictResponse**](../Model/DistrictResponse.md)
+[**\Clever\Model\DistrictResponse**](../Model/DistrictResponse.md)
 
 ### Authorization
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrictAdmin**
-> \Swagger\Client\Model\DistrictAdminResponse getDistrictAdmin($id)
+> \Clever\Model\DistrictAdminResponse getDistrictAdmin($id)
 
 
 
@@ -256,9 +256,9 @@ Returns a specific district admin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictAdminResponse**](../Model/DistrictAdminResponse.md)
+[**\Clever\Model\DistrictAdminResponse**](../Model/DistrictAdminResponse.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrictAdmins**
-> \Swagger\Client\Model\DistrictAdminsResponse getDistrictAdmins($starting_after, $ending_before)
+> \Clever\Model\DistrictAdminsResponse getDistrictAdmins($starting_after, $ending_before)
 
 
 
@@ -304,9 +304,9 @@ Returns a list of district admins
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictAdminsResponse**](../Model/DistrictAdminsResponse.md)
+[**\Clever\Model\DistrictAdminsResponse**](../Model/DistrictAdminsResponse.md)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrictForSchool**
-> \Swagger\Client\Model\DistrictResponse getDistrictForSchool($id)
+> \Clever\Model\DistrictResponse getDistrictForSchool($id)
 
 
 
@@ -354,9 +354,9 @@ Returns the district for a school
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictResponse**](../Model/DistrictResponse.md)
+[**\Clever\Model\DistrictResponse**](../Model/DistrictResponse.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrictForSection**
-> \Swagger\Client\Model\DistrictResponse getDistrictForSection($id)
+> \Clever\Model\DistrictResponse getDistrictForSection($id)
 
 
 
@@ -402,9 +402,9 @@ Returns the district for a section
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictResponse**](../Model/DistrictResponse.md)
+[**\Clever\Model\DistrictResponse**](../Model/DistrictResponse.md)
 
 ### Authorization
 
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrictForStudent**
-> \Swagger\Client\Model\DistrictResponse getDistrictForStudent($id)
+> \Clever\Model\DistrictResponse getDistrictForStudent($id)
 
 
 
@@ -450,9 +450,9 @@ Returns the district for a student
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictResponse**](../Model/DistrictResponse.md)
+[**\Clever\Model\DistrictResponse**](../Model/DistrictResponse.md)
 
 ### Authorization
 
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrictForStudentContact**
-> \Swagger\Client\Model\DistrictResponse getDistrictForStudentContact($id)
+> \Clever\Model\DistrictResponse getDistrictForStudentContact($id)
 
 
 
@@ -498,9 +498,9 @@ Returns the district for a student contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictResponse**](../Model/DistrictResponse.md)
+[**\Clever\Model\DistrictResponse**](../Model/DistrictResponse.md)
 
 ### Authorization
 
@@ -534,7 +534,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrictForTeacher**
-> \Swagger\Client\Model\DistrictResponse getDistrictForTeacher($id)
+> \Clever\Model\DistrictResponse getDistrictForTeacher($id)
 
 
 
@@ -546,9 +546,9 @@ Returns the district for a teacher
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictResponse**](../Model/DistrictResponse.md)
+[**\Clever\Model\DistrictResponse**](../Model/DistrictResponse.md)
 
 ### Authorization
 
@@ -582,7 +582,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistrictStatus**
-> \Swagger\Client\Model\DistrictStatusResponses getDistrictStatus($id)
+> \Clever\Model\DistrictStatusResponses getDistrictStatus($id)
 
 
 
@@ -594,9 +594,9 @@ Returns the status of the district
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -616,7 +616,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictStatusResponses**](../Model/DistrictStatusResponses.md)
+[**\Clever\Model\DistrictStatusResponses**](../Model/DistrictStatusResponses.md)
 
 ### Authorization
 
@@ -630,7 +630,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDistricts**
-> \Swagger\Client\Model\DistrictsResponse getDistricts()
+> \Clever\Model\DistrictsResponse getDistricts()
 
 
 
@@ -642,9 +642,9 @@ Returns a list of districts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 
 try {
     $result = $api_instance->getDistricts();
@@ -660,7 +660,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\DistrictsResponse**](../Model/DistrictsResponse.md)
+[**\Clever\Model\DistrictsResponse**](../Model/DistrictsResponse.md)
 
 ### Authorization
 
@@ -674,7 +674,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGradeLevelsForTeacher**
-> \Swagger\Client\Model\GradeLevelsResponse getGradeLevelsForTeacher($id)
+> \Clever\Model\GradeLevelsResponse getGradeLevelsForTeacher($id)
 
 
 
@@ -686,9 +686,9 @@ Returns the grade levels for sections a teacher teaches
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -708,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GradeLevelsResponse**](../Model/GradeLevelsResponse.md)
+[**\Clever\Model\GradeLevelsResponse**](../Model/GradeLevelsResponse.md)
 
 ### Authorization
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchool**
-> \Swagger\Client\Model\SchoolResponse getSchool($id)
+> \Clever\Model\SchoolResponse getSchool($id)
 
 
 
@@ -734,9 +734,9 @@ Returns a specific school
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -756,7 +756,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SchoolResponse**](../Model/SchoolResponse.md)
+[**\Clever\Model\SchoolResponse**](../Model/SchoolResponse.md)
 
 ### Authorization
 
@@ -770,7 +770,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchoolAdmin**
-> \Swagger\Client\Model\SchoolAdminResponse getSchoolAdmin($id)
+> \Clever\Model\SchoolAdminResponse getSchoolAdmin($id)
 
 
 
@@ -782,9 +782,9 @@ Returns a specific school admin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -804,7 +804,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SchoolAdminResponse**](../Model/SchoolAdminResponse.md)
+[**\Clever\Model\SchoolAdminResponse**](../Model/SchoolAdminResponse.md)
 
 ### Authorization
 
@@ -818,7 +818,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchoolAdmins**
-> \Swagger\Client\Model\SchoolAdminsResponse getSchoolAdmins($limit, $starting_after, $ending_before)
+> \Clever\Model\SchoolAdminsResponse getSchoolAdmins($limit, $starting_after, $ending_before)
 
 
 
@@ -830,9 +830,9 @@ Returns a list of school admins
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -856,7 +856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SchoolAdminsResponse**](../Model/SchoolAdminsResponse.md)
+[**\Clever\Model\SchoolAdminsResponse**](../Model/SchoolAdminsResponse.md)
 
 ### Authorization
 
@@ -870,7 +870,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchoolForSection**
-> \Swagger\Client\Model\SchoolResponse getSchoolForSection($id)
+> \Clever\Model\SchoolResponse getSchoolForSection($id)
 
 
 
@@ -882,9 +882,9 @@ Returns the school for a section
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -904,7 +904,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SchoolResponse**](../Model/SchoolResponse.md)
+[**\Clever\Model\SchoolResponse**](../Model/SchoolResponse.md)
 
 ### Authorization
 
@@ -918,7 +918,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchoolForStudent**
-> \Swagger\Client\Model\SchoolResponse getSchoolForStudent($id)
+> \Clever\Model\SchoolResponse getSchoolForStudent($id)
 
 
 
@@ -930,9 +930,9 @@ Returns the primary school for a student
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -952,7 +952,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SchoolResponse**](../Model/SchoolResponse.md)
+[**\Clever\Model\SchoolResponse**](../Model/SchoolResponse.md)
 
 ### Authorization
 
@@ -966,7 +966,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchoolForTeacher**
-> \Swagger\Client\Model\SchoolResponse getSchoolForTeacher($id)
+> \Clever\Model\SchoolResponse getSchoolForTeacher($id)
 
 
 
@@ -978,9 +978,9 @@ Retrieves school info for a teacher.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1000,7 +1000,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SchoolResponse**](../Model/SchoolResponse.md)
+[**\Clever\Model\SchoolResponse**](../Model/SchoolResponse.md)
 
 ### Authorization
 
@@ -1014,7 +1014,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchools**
-> \Swagger\Client\Model\SchoolsResponse getSchools($limit, $starting_after, $ending_before)
+> \Clever\Model\SchoolsResponse getSchools($limit, $starting_after, $ending_before)
 
 
 
@@ -1026,9 +1026,9 @@ Returns a list of schools
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -1052,7 +1052,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SchoolsResponse**](../Model/SchoolsResponse.md)
+[**\Clever\Model\SchoolsResponse**](../Model/SchoolsResponse.md)
 
 ### Authorization
 
@@ -1066,7 +1066,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchoolsForSchoolAdmin**
-> \Swagger\Client\Model\SchoolsResponse getSchoolsForSchoolAdmin($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\SchoolsResponse getSchoolsForSchoolAdmin($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1078,9 +1078,9 @@ Returns the schools for a school admin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1106,7 +1106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SchoolsResponse**](../Model/SchoolsResponse.md)
+[**\Clever\Model\SchoolsResponse**](../Model/SchoolsResponse.md)
 
 ### Authorization
 
@@ -1120,7 +1120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSection**
-> \Swagger\Client\Model\SectionResponse getSection($id)
+> \Clever\Model\SectionResponse getSection($id)
 
 
 
@@ -1132,9 +1132,9 @@ Returns a specific section
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1154,7 +1154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SectionResponse**](../Model/SectionResponse.md)
+[**\Clever\Model\SectionResponse**](../Model/SectionResponse.md)
 
 ### Authorization
 
@@ -1168,7 +1168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSections**
-> \Swagger\Client\Model\SectionsResponse getSections($limit, $starting_after, $ending_before)
+> \Clever\Model\SectionsResponse getSections($limit, $starting_after, $ending_before)
 
 
 
@@ -1180,9 +1180,9 @@ Returns a list of sections
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -1206,7 +1206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SectionsResponse**](../Model/SectionsResponse.md)
+[**\Clever\Model\SectionsResponse**](../Model/SectionsResponse.md)
 
 ### Authorization
 
@@ -1220,7 +1220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSectionsForSchool**
-> \Swagger\Client\Model\SectionsResponse getSectionsForSchool($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\SectionsResponse getSectionsForSchool($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1232,9 +1232,9 @@ Returns the sections for a school
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1260,7 +1260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SectionsResponse**](../Model/SectionsResponse.md)
+[**\Clever\Model\SectionsResponse**](../Model/SectionsResponse.md)
 
 ### Authorization
 
@@ -1274,7 +1274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSectionsForStudent**
-> \Swagger\Client\Model\SectionsResponse getSectionsForStudent($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\SectionsResponse getSectionsForStudent($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1286,9 +1286,9 @@ Returns the sections for a student
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1314,7 +1314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SectionsResponse**](../Model/SectionsResponse.md)
+[**\Clever\Model\SectionsResponse**](../Model/SectionsResponse.md)
 
 ### Authorization
 
@@ -1328,7 +1328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSectionsForTeacher**
-> \Swagger\Client\Model\SectionsResponse getSectionsForTeacher($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\SectionsResponse getSectionsForTeacher($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1340,9 +1340,9 @@ Returns the sections for a teacher
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1368,7 +1368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SectionsResponse**](../Model/SectionsResponse.md)
+[**\Clever\Model\SectionsResponse**](../Model/SectionsResponse.md)
 
 ### Authorization
 
@@ -1382,7 +1382,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStudent**
-> \Swagger\Client\Model\StudentResponse getStudent($id)
+> \Clever\Model\StudentResponse getStudent($id)
 
 
 
@@ -1394,9 +1394,9 @@ Returns a specific student
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1416,7 +1416,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentResponse**](../Model/StudentResponse.md)
+[**\Clever\Model\StudentResponse**](../Model/StudentResponse.md)
 
 ### Authorization
 
@@ -1430,7 +1430,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStudentForContact**
-> \Swagger\Client\Model\StudentResponse getStudentForContact($id)
+> \Clever\Model\StudentResponse getStudentForContact($id)
 
 
 
@@ -1442,9 +1442,9 @@ Returns the student for a student contact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1464,7 +1464,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentResponse**](../Model/StudentResponse.md)
+[**\Clever\Model\StudentResponse**](../Model/StudentResponse.md)
 
 ### Authorization
 
@@ -1478,7 +1478,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStudents**
-> \Swagger\Client\Model\StudentsResponse getStudents($limit, $starting_after, $ending_before)
+> \Clever\Model\StudentsResponse getStudents($limit, $starting_after, $ending_before)
 
 
 
@@ -1490,9 +1490,9 @@ Returns a list of students
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -1516,7 +1516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentsResponse**](../Model/StudentsResponse.md)
+[**\Clever\Model\StudentsResponse**](../Model/StudentsResponse.md)
 
 ### Authorization
 
@@ -1530,7 +1530,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStudentsForSchool**
-> \Swagger\Client\Model\StudentsResponse getStudentsForSchool($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\StudentsResponse getStudentsForSchool($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1542,9 +1542,9 @@ Returns the students for a school
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1570,7 +1570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentsResponse**](../Model/StudentsResponse.md)
+[**\Clever\Model\StudentsResponse**](../Model/StudentsResponse.md)
 
 ### Authorization
 
@@ -1584,7 +1584,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStudentsForSection**
-> \Swagger\Client\Model\StudentsResponse getStudentsForSection($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\StudentsResponse getStudentsForSection($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1596,9 +1596,9 @@ Returns the students for a section
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1624,7 +1624,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentsResponse**](../Model/StudentsResponse.md)
+[**\Clever\Model\StudentsResponse**](../Model/StudentsResponse.md)
 
 ### Authorization
 
@@ -1638,7 +1638,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStudentsForTeacher**
-> \Swagger\Client\Model\StudentsResponse getStudentsForTeacher($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\StudentsResponse getStudentsForTeacher($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1650,9 +1650,9 @@ Returns the students for a teacher
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1678,7 +1678,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StudentsResponse**](../Model/StudentsResponse.md)
+[**\Clever\Model\StudentsResponse**](../Model/StudentsResponse.md)
 
 ### Authorization
 
@@ -1692,7 +1692,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeacher**
-> \Swagger\Client\Model\TeacherResponse getTeacher($id)
+> \Clever\Model\TeacherResponse getTeacher($id)
 
 
 
@@ -1704,9 +1704,9 @@ Returns a specific teacher
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1726,7 +1726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TeacherResponse**](../Model/TeacherResponse.md)
+[**\Clever\Model\TeacherResponse**](../Model/TeacherResponse.md)
 
 ### Authorization
 
@@ -1740,7 +1740,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeacherForSection**
-> \Swagger\Client\Model\TeacherResponse getTeacherForSection($id)
+> \Clever\Model\TeacherResponse getTeacherForSection($id)
 
 
 
@@ -1752,9 +1752,9 @@ Returns the primary teacher for a section
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 
 try {
@@ -1774,7 +1774,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TeacherResponse**](../Model/TeacherResponse.md)
+[**\Clever\Model\TeacherResponse**](../Model/TeacherResponse.md)
 
 ### Authorization
 
@@ -1788,7 +1788,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeachers**
-> \Swagger\Client\Model\TeachersResponse getTeachers($limit, $starting_after, $ending_before)
+> \Clever\Model\TeachersResponse getTeachers($limit, $starting_after, $ending_before)
 
 
 
@@ -1800,9 +1800,9 @@ Returns a list of teachers
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -1826,7 +1826,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TeachersResponse**](../Model/TeachersResponse.md)
+[**\Clever\Model\TeachersResponse**](../Model/TeachersResponse.md)
 
 ### Authorization
 
@@ -1840,7 +1840,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeachersForSchool**
-> \Swagger\Client\Model\TeachersResponse getTeachersForSchool($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\TeachersResponse getTeachersForSchool($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1852,9 +1852,9 @@ Returns the teachers for a school
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1880,7 +1880,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TeachersResponse**](../Model/TeachersResponse.md)
+[**\Clever\Model\TeachersResponse**](../Model/TeachersResponse.md)
 
 ### Authorization
 
@@ -1894,7 +1894,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeachersForSection**
-> \Swagger\Client\Model\TeachersResponse getTeachersForSection($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\TeachersResponse getTeachersForSection($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1906,9 +1906,9 @@ Returns the teachers for a section
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1934,7 +1934,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TeachersResponse**](../Model/TeachersResponse.md)
+[**\Clever\Model\TeachersResponse**](../Model/TeachersResponse.md)
 
 ### Authorization
 
@@ -1948,7 +1948,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeachersForStudent**
-> \Swagger\Client\Model\TeachersResponse getTeachersForStudent($id, $limit, $starting_after, $ending_before)
+> \Clever\Model\TeachersResponse getTeachersForStudent($id, $limit, $starting_after, $ending_before)
 
 
 
@@ -1960,9 +1960,9 @@ Returns the teachers for a student
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\DataApi();
+$api_instance = new Clever\Api\DataApi();
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1988,7 +1988,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TeachersResponse**](../Model/TeachersResponse.md)
+[**\Clever\Model\TeachersResponse**](../Model/TeachersResponse.md)
 
 ### Authorization
 

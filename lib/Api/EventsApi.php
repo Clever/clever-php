@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Clever
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Clever\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Clever\ApiClient;
+use \Clever\ApiException;
+use \Clever\Configuration;
+use \Clever\ObjectSerializer;
 
 /**
  * EventsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Clever
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class EventsApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Clever\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Clever\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Clever\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class EventsApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Clever\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class EventsApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Clever\ApiClient $apiClient set the API client
      *
      * @return EventsApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Clever\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -91,8 +91,8 @@ class EventsApi
      * Operation getEvent
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\EventResponse
+     * @throws \Clever\ApiException on non-2xx response
+     * @return \Clever\Model\EventResponse
      */
     public function getEvent($id)
     {
@@ -104,8 +104,8 @@ class EventsApi
      * Operation getEventWithHttpInfo
      *
      * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\EventResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Clever\ApiException on non-2xx response
+     * @return array of \Clever\Model\EventResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventWithHttpInfo($id)
     {
@@ -152,19 +152,19 @@ class EventsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\EventResponse',
+                '\Clever\Model\EventResponse',
                 '/events/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\EventResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Clever\Model\EventResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\EventResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\EventResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\NotFound', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\NotFound', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -179,8 +179,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\EventsResponse
+     * @throws \Clever\ApiException on non-2xx response
+     * @return \Clever\Model\EventsResponse
      */
     public function getEvents($limit = null, $starting_after = null, $ending_before = null)
     {
@@ -194,8 +194,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Clever\ApiException on non-2xx response
+     * @return array of \Clever\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventsWithHttpInfo($limit = null, $starting_after = null, $ending_before = null)
     {
@@ -242,19 +242,19 @@ class EventsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\EventsResponse',
+                '\Clever\Model\EventsResponse',
                 '/events'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Clever\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\EventsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\EventsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\NotFound', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\NotFound', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -270,8 +270,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\EventsResponse
+     * @throws \Clever\ApiException on non-2xx response
+     * @return \Clever\Model\EventsResponse
      */
     public function getEventsForSchool($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -286,8 +286,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Clever\ApiException on non-2xx response
+     * @return array of \Clever\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventsForSchoolWithHttpInfo($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -346,19 +346,19 @@ class EventsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\EventsResponse',
+                '\Clever\Model\EventsResponse',
                 '/schools/{id}/events'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Clever\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\EventsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\EventsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\NotFound', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\NotFound', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -374,8 +374,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\EventsResponse
+     * @throws \Clever\ApiException on non-2xx response
+     * @return \Clever\Model\EventsResponse
      */
     public function getEventsForSchoolAdmin($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -390,8 +390,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Clever\ApiException on non-2xx response
+     * @return array of \Clever\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventsForSchoolAdminWithHttpInfo($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -450,19 +450,19 @@ class EventsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\EventsResponse',
+                '\Clever\Model\EventsResponse',
                 '/school_admins/{id}/events'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Clever\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\EventsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\EventsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\NotFound', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\NotFound', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -478,8 +478,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\EventsResponse
+     * @throws \Clever\ApiException on non-2xx response
+     * @return \Clever\Model\EventsResponse
      */
     public function getEventsForSection($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -494,8 +494,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Clever\ApiException on non-2xx response
+     * @return array of \Clever\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventsForSectionWithHttpInfo($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -554,19 +554,19 @@ class EventsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\EventsResponse',
+                '\Clever\Model\EventsResponse',
                 '/sections/{id}/events'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Clever\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\EventsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\EventsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\NotFound', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\NotFound', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -582,8 +582,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\EventsResponse
+     * @throws \Clever\ApiException on non-2xx response
+     * @return \Clever\Model\EventsResponse
      */
     public function getEventsForStudent($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -598,8 +598,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Clever\ApiException on non-2xx response
+     * @return array of \Clever\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventsForStudentWithHttpInfo($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -658,19 +658,19 @@ class EventsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\EventsResponse',
+                '\Clever\Model\EventsResponse',
                 '/students/{id}/events'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Clever\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\EventsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\EventsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\NotFound', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\NotFound', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -686,8 +686,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\EventsResponse
+     * @throws \Clever\ApiException on non-2xx response
+     * @return \Clever\Model\EventsResponse
      */
     public function getEventsForTeacher($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -702,8 +702,8 @@ class EventsApi
      * @param int $limit  (optional)
      * @param string $starting_after  (optional)
      * @param string $ending_before  (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Clever\ApiException on non-2xx response
+     * @return array of \Clever\Model\EventsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventsForTeacherWithHttpInfo($id, $limit = null, $starting_after = null, $ending_before = null)
     {
@@ -762,19 +762,19 @@ class EventsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\EventsResponse',
+                '\Clever\Model\EventsResponse',
                 '/teachers/{id}/events'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Clever\Model\EventsResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\EventsResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\EventsResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\NotFound', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Clever\Model\NotFound', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

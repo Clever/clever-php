@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **string** |  | [optional] 
-**credentials** | [**\Swagger\Client\Model\Credentials**](Credentials.md) |  | [optional] 
+**credentials** | [**\Clever\Model\Credentials**](Credentials.md) |  | [optional] 
 **district** | **string** |  | [optional] 
 **dob** | **string** |  | [optional] 
 **ell_status** | **string** |  | [optional] 
@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **id** | **string** |  | [optional] 
 **iep_status** | **string** |  | [optional] 
 **last_modified** | **string** |  | [optional] 
-**location** | [**\Swagger\Client\Model\Location**](Location.md) |  | [optional] 
-**name** | [**\Swagger\Client\Model\Name**](Name.md) |  | [optional] 
+**location** | [**\Clever\Model\Location**](Location.md) |  | [optional] 
+**name** | [**\Clever\Model\Name**](Name.md) |  | [optional] 
 **race** | **string** |  | [optional] 
 **school** | **string** |  | [optional] 
 **schools** | **string[]** |  | [optional] 

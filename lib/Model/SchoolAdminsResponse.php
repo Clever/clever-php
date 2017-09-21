@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Clever
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Clever\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * SchoolAdminsResponse Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Clever
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,7 +54,7 @@ class SchoolAdminsResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\Swagger\Client\Model\SchoolAdminResponse[]'
+        'data' => '\Clever\Model\SchoolAdminResponse[]'
     ];
 
     /**
@@ -162,7 +162,7 @@ class SchoolAdminsResponse implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\SchoolAdminResponse[]
+     * @return \Clever\Model\SchoolAdminResponse[]
      */
     public function getData()
     {
@@ -171,7 +171,7 @@ class SchoolAdminsResponse implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\SchoolAdminResponse[] $data
+     * @param \Clever\Model\SchoolAdminResponse[] $data
      * @return $this
      */
     public function setData($data)
@@ -232,10 +232,10 @@ class SchoolAdminsResponse implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Clever
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Clever\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * School Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Clever
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -59,13 +59,13 @@ class School implements ArrayAccess
         'high_grade' => 'string',
         'id' => 'string',
         'last_modified' => 'string',
-        'location' => '\Swagger\Client\Model\Location',
+        'location' => '\Clever\Model\Location',
         'low_grade' => 'string',
         'mdr_number' => 'string',
         'name' => 'string',
         'nces_id' => 'string',
         'phone' => 'string',
-        'principal' => '\Swagger\Client\Model\Principal',
+        'principal' => '\Clever\Model\Principal',
         'school_number' => 'string',
         'sis_id' => 'string',
         'state_id' => 'string'
@@ -468,7 +468,7 @@ class School implements ArrayAccess
 
     /**
      * Gets location
-     * @return \Swagger\Client\Model\Location
+     * @return \Clever\Model\Location
      */
     public function getLocation()
     {
@@ -477,7 +477,7 @@ class School implements ArrayAccess
 
     /**
      * Sets location
-     * @param \Swagger\Client\Model\Location $location
+     * @param \Clever\Model\Location $location
      * @return $this
      */
     public function setLocation($location)
@@ -603,7 +603,7 @@ class School implements ArrayAccess
 
     /**
      * Gets principal
-     * @return \Swagger\Client\Model\Principal
+     * @return \Clever\Model\Principal
      */
     public function getPrincipal()
     {
@@ -612,7 +612,7 @@ class School implements ArrayAccess
 
     /**
      * Sets principal
-     * @param \Swagger\Client\Model\Principal $principal
+     * @param \Clever\Model\Principal $principal
      * @return $this
      */
     public function setPrincipal($principal)
@@ -736,10 +736,10 @@ class School implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

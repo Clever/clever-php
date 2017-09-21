@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Clever
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Clever\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * Section Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Clever
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -71,7 +71,7 @@ class Section implements ArrayAccess
         'subject' => 'string',
         'teacher' => 'string',
         'teachers' => 'string[]',
-        'term' => '\Swagger\Client\Model\Term'
+        'term' => '\Clever\Model\Term'
     ];
 
     /**
@@ -737,7 +737,7 @@ class Section implements ArrayAccess
 
     /**
      * Gets term
-     * @return \Swagger\Client\Model\Term
+     * @return \Clever\Model\Term
      */
     public function getTerm()
     {
@@ -746,7 +746,7 @@ class Section implements ArrayAccess
 
     /**
      * Sets term
-     * @param \Swagger\Client\Model\Term $term
+     * @param \Clever\Model\Term $term
      * @return $this
      */
     public function setTerm($term)
@@ -807,10 +807,10 @@ class Section implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

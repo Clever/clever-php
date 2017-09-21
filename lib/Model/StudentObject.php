@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Clever
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Clever\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * StudentObject Class Doc Comment
  *
  * @category    Class
- * @package     Swagger\Client
+ * @package     Clever
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,7 +54,7 @@ class StudentObject implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'object' => '\Swagger\Client\Model\Student'
+        'object' => '\Clever\Model\Student'
     ];
 
     /**
@@ -162,7 +162,7 @@ class StudentObject implements ArrayAccess
 
     /**
      * Gets object
-     * @return \Swagger\Client\Model\Student
+     * @return \Clever\Model\Student
      */
     public function getObject()
     {
@@ -171,7 +171,7 @@ class StudentObject implements ArrayAccess
 
     /**
      * Sets object
-     * @param \Swagger\Client\Model\Student $object
+     * @param \Clever\Model\Student $object
      * @return $this
      */
     public function setObject($object)
@@ -232,10 +232,10 @@ class StudentObject implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Clever\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 
