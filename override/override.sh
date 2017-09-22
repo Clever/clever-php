@@ -16,4 +16,6 @@ sed -i "" '/# SwaggerClient-php/,/<EOD>/d' docs/README.md
 sed -i "" '/## Author/d' docs/README.md
 sed -i "" 's/docs\///g' docs/README.md
 git grep -l '../README.md' -- './docs/*' | xargs sed -i "" 's/..\/README.md/README.md/g'
+# These links never actually worked!
+git grep -l 'README.md' -- './docs/Model/*' | xargs sed -i "" 's/README.md/..\/README.md/g'
 cp override/README.md README.md
