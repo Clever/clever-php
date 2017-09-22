@@ -84,14 +84,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getContacts**
 > \Clever\Model\StudentContactsResponse getContacts($limit, $starting_after, $ending_before)
@@ -136,14 +136,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getContactsForStudent**
 > \Clever\Model\StudentContactsForStudentResponse getContactsForStudent($id, $limit)
@@ -186,14 +186,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrict**
 > \Clever\Model\DistrictResponse getDistrict($id)
@@ -234,14 +234,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictAdmin**
 > \Clever\Model\DistrictAdminResponse getDistrictAdmin($id)
@@ -282,14 +282,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictAdmins**
 > \Clever\Model\DistrictAdminsResponse getDistrictAdmins($starting_after, $ending_before)
@@ -332,14 +332,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictForSchool**
 > \Clever\Model\DistrictResponse getDistrictForSchool($id)
@@ -380,14 +380,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictForSection**
 > \Clever\Model\DistrictResponse getDistrictForSection($id)
@@ -428,14 +428,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictForStudent**
 > \Clever\Model\DistrictResponse getDistrictForStudent($id)
@@ -476,14 +476,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictForStudentContact**
 > \Clever\Model\DistrictResponse getDistrictForStudentContact($id)
@@ -524,14 +524,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictForTeacher**
 > \Clever\Model\DistrictResponse getDistrictForTeacher($id)
@@ -572,14 +572,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistrictStatus**
 > \Clever\Model\DistrictStatusResponses getDistrictStatus($id)
@@ -620,14 +620,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getDistricts**
 > \Clever\Model\DistrictsResponse getDistricts()
@@ -664,14 +664,14 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getGradeLevelsForTeacher**
 > \Clever\Model\GradeLevelsResponse getGradeLevelsForTeacher($id)
@@ -712,14 +712,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSchool**
 > \Clever\Model\SchoolResponse getSchool($id)
@@ -760,14 +760,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSchoolAdmin**
 > \Clever\Model\SchoolAdminResponse getSchoolAdmin($id)
@@ -808,14 +808,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSchoolAdmins**
 > \Clever\Model\SchoolAdminsResponse getSchoolAdmins($limit, $starting_after, $ending_before)
@@ -860,14 +860,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSchoolForSection**
 > \Clever\Model\SchoolResponse getSchoolForSection($id)
@@ -908,14 +908,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSchoolForStudent**
 > \Clever\Model\SchoolResponse getSchoolForStudent($id)
@@ -956,14 +956,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSchoolForTeacher**
 > \Clever\Model\SchoolResponse getSchoolForTeacher($id)
@@ -1004,14 +1004,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSchools**
 > \Clever\Model\SchoolsResponse getSchools($limit, $starting_after, $ending_before)
@@ -1056,14 +1056,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSchoolsForSchoolAdmin**
 > \Clever\Model\SchoolsResponse getSchoolsForSchoolAdmin($id, $limit, $starting_after, $ending_before)
@@ -1110,14 +1110,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSection**
 > \Clever\Model\SectionResponse getSection($id)
@@ -1158,14 +1158,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSections**
 > \Clever\Model\SectionsResponse getSections($limit, $starting_after, $ending_before)
@@ -1210,14 +1210,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSectionsForSchool**
 > \Clever\Model\SectionsResponse getSectionsForSchool($id, $limit, $starting_after, $ending_before)
@@ -1264,14 +1264,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSectionsForStudent**
 > \Clever\Model\SectionsResponse getSectionsForStudent($id, $limit, $starting_after, $ending_before)
@@ -1318,14 +1318,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSectionsForTeacher**
 > \Clever\Model\SectionsResponse getSectionsForTeacher($id, $limit, $starting_after, $ending_before)
@@ -1372,14 +1372,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getStudent**
 > \Clever\Model\StudentResponse getStudent($id)
@@ -1420,14 +1420,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getStudentForContact**
 > \Clever\Model\StudentResponse getStudentForContact($id)
@@ -1468,14 +1468,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getStudents**
 > \Clever\Model\StudentsResponse getStudents($limit, $starting_after, $ending_before)
@@ -1520,14 +1520,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getStudentsForSchool**
 > \Clever\Model\StudentsResponse getStudentsForSchool($id, $limit, $starting_after, $ending_before)
@@ -1574,14 +1574,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getStudentsForSection**
 > \Clever\Model\StudentsResponse getStudentsForSection($id, $limit, $starting_after, $ending_before)
@@ -1628,14 +1628,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getStudentsForTeacher**
 > \Clever\Model\StudentsResponse getStudentsForTeacher($id, $limit, $starting_after, $ending_before)
@@ -1682,14 +1682,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeacher**
 > \Clever\Model\TeacherResponse getTeacher($id)
@@ -1730,14 +1730,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeacherForSection**
 > \Clever\Model\TeacherResponse getTeacherForSection($id)
@@ -1778,14 +1778,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeachers**
 > \Clever\Model\TeachersResponse getTeachers($limit, $starting_after, $ending_before)
@@ -1830,14 +1830,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeachersForSchool**
 > \Clever\Model\TeachersResponse getTeachersForSchool($id, $limit, $starting_after, $ending_before)
@@ -1884,14 +1884,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeachersForSection**
 > \Clever\Model\TeachersResponse getTeachersForSection($id, $limit, $starting_after, $ending_before)
@@ -1938,14 +1938,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTeachersForStudent**
 > \Clever\Model\TeachersResponse getTeachersForStudent($id, $limit, $starting_after, $ending_before)
@@ -1992,12 +1992,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

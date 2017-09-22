@@ -52,14 +52,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEvents**
 > \Clever\Model\EventsResponse getEvents($limit, $starting_after, $ending_before)
@@ -104,14 +104,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventsForSchool**
 > \Clever\Model\EventsResponse getEventsForSchool($id, $limit, $starting_after, $ending_before)
@@ -158,14 +158,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventsForSchoolAdmin**
 > \Clever\Model\EventsResponse getEventsForSchoolAdmin($id, $limit, $starting_after, $ending_before)
@@ -212,14 +212,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventsForSection**
 > \Clever\Model\EventsResponse getEventsForSection($id, $limit, $starting_after, $ending_before)
@@ -266,14 +266,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventsForStudent**
 > \Clever\Model\EventsResponse getEventsForStudent($id, $limit, $starting_after, $ending_before)
@@ -320,14 +320,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getEventsForTeacher**
 > \Clever\Model\EventsResponse getEventsForTeacher($id, $limit, $starting_after, $ending_before)
@@ -374,12 +374,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

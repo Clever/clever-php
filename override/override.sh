@@ -8,3 +8,12 @@ git grep -l 'Swagger\\\\Client' -- './*' ':(exclude)override/override.sh' | xarg
 
 # Copy override files for events
 cp override/ObjectSerializer.php lib/
+
+# Update the README
+mv README.md docs/README.md
+sed -i "" 's/## Documentation for API Endpoints/<EOD>\'$'\n## Documentation for API Endpoints/g' docs/README.md
+sed -i "" '/# SwaggerClient-php/,/<EOD>/d' docs/README.md
+sed -i "" '/## Author/d' docs/README.md
+sed -i "" 's/docs\///g' docs/README.md
+git grep -l '../README.md' -- './docs/*' | xargs sed -i "" 's/..\/README.md/README.md/g'
+cp override/README.md README.md
