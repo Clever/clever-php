@@ -66,7 +66,7 @@ require_once('./autoload.php');
 
 // Note: This is hard coded for demo purposes only. Keep your access tokens secret!
 // https://dev.clever.com/docs/security#section-security-best-practices
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('DEMO_TOKEN');
+Clever\Configuration::getDefaultConfiguration()->setAccessToken('TEST_TOKEN');
 
 $api_instance = new Clever\Api\DataApi();
 
