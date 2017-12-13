@@ -86,16 +86,12 @@ try {
 
 2. Git clone Clever's swagger-api repo (https://github.com/Clever/swagger-api)
 
-3. Are you removing some old models? Consider removing existing files from `docs/` and `lib/` and `/test` before regenerating files
-
-4. Are you adding new event types? Consider override files that need to be updated in `override/`
-
-5. Run this command in the swagger-codegen repo
+3. Run this command in the swagger-codegen repo
 ```
 java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i $PATH_TO_SWAGGER_API_REPO/v1.2-client.yml -c $PATH_TO_THIS_REPO/override/config.json -l php -o $PATH_TO_THIS_REPO --additional-properties packageVersion=$VERSION
 ```
 
-6. Run `make override` to copy over the override files
+4. Run `make override` to copy over the override files
 
 ## Publishing
 
