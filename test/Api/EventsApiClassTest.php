@@ -11,7 +11,6 @@ class EventsApiClassTest extends \PHPUnit_Framework_TestCase
      */
     public static function setUpBeforeClass()
     {
-      Configuration::getDefaultConfiguration()->setAccessToken('TEST_TOKEN');
     }
     /**
      * Setup before running each test case
@@ -40,6 +39,7 @@ class EventsApiClassTest extends \PHPUnit_Framework_TestCase
     public function testEventClass()
     {
       $api_instance = new Api\EventsApi();
+      $api_instance->getConfig()->setAccessToken('TEST_TOKEN');
       $result = $api_instance->getEvents(1);
       $eventResponse = $result->getData()[0];
       $event = $eventResponse->getData();

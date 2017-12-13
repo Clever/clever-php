@@ -64,11 +64,11 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once('./autoload.php');
 
+$api_instance = new Clever\Api\DataApi();
+
 // Note: This is hard coded for demo purposes only. Keep your access tokens secret!
 // https://dev.clever.com/docs/security#section-security-best-practices
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('TEST_TOKEN');
-
-$api_instance = new Clever\Api\DataApi();
+$api_instance->getConfig()->setAccessToken('TEST_TOKEN');
 
 try {
     $result = $api_instance->getStudents();
