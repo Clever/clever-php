@@ -19,3 +19,4 @@ git grep -l '../README.md' -- './docs/*' | xargs sed -i "" 's/..\/README.md/READ
 # These links never actually worked!
 git grep -l 'README.md' -- './docs/Model/*' | xargs sed -i "" 's/README.md/..\/README.md/g'
 cp override/README.md README.md
+cp override/EventsApiClassTest.php test/Api/EventsApiClassTest.php
