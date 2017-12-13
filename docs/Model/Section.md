@@ -3,9 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**course_description** | **string** |  | [optional] 
-**course_name** | **string** |  | [optional] 
-**course_number** | **string** |  | [optional] 
+**course** | **string** |  | [optional] 
 **created** | **string** |  | [optional] 
 **district** | **string** |  | [optional] 
 **grade** | **string** |  | [optional] 
@@ -20,7 +18,7 @@ Name | Type | Description | Notes
 **subject** | **string** |  | [optional] 
 **teacher** | **string** |  | [optional] 
 **teachers** | **string[]** |  | [optional] 
-**term** | [**\Clever\Model\Term**](Term.md) |  | [optional] 
+**term_id** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
