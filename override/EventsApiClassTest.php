@@ -11,7 +11,7 @@ class EventsApiClassTest extends \PHPUnit_Framework_TestCase
      */
     public static function setUpBeforeClass()
     {
-      Configuration::getDefaultConfiguration()->setAccessToken('DEMO_EVENTS_TOKEN');
+      Configuration::getDefaultConfiguration()->setAccessToken('TEST_TOKEN');
     }
     /**
      * Setup before running each test case
