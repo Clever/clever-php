@@ -1,3 +1,7 @@
+## 1.0.1 (2018-05-15)
+
+* Change students home_language 'Telegu' to 'Telugu'
+
 ## 1.0.0 (2017-12-14)
 
 * Swagger generated library supporting API 2.0
