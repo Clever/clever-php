@@ -88,7 +88,7 @@ try {
 
 3. Run this command in the swagger-codegen repo
 ```
-java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i $PATH_TO_SWAGGER_API_REPO/v1.2-client.yml -c $PATH_TO_THIS_REPO/override/config.json -l php -o $PATH_TO_THIS_REPO --additional-properties packageVersion=$VERSION
+java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i $PATH_TO_SWAGGER_API_REPO/v2.0-client.yml -c $PATH_TO_THIS_REPO/override/config.json -l php -o $PATH_TO_THIS_REPO --additional-properties packageVersion=$VERSION
 ```
 
 4. Run `make override` to copy over the override files
