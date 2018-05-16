@@ -337,7 +337,7 @@ class Student implements ModelInterface, ArrayAccess
     const HOME_LANGUAGE_SWAHILI = 'Swahili';
     const HOME_LANGUAGE_TAGALOG = 'Tagalog';
     const HOME_LANGUAGE_TAMIL = 'Tamil';
-    const HOME_LANGUAGE_TELEGU = 'Telegu';
+    const HOME_LANGUAGE_TELUGU = 'Telugu';
     const HOME_LANGUAGE_THAI = 'Thai';
     const HOME_LANGUAGE_TIGRINYA = 'Tigrinya';
     const HOME_LANGUAGE_TURKISH = 'Turkish';
@@ -472,7 +472,7 @@ class Student implements ModelInterface, ArrayAccess
             self::HOME_LANGUAGE_SWAHILI,
             self::HOME_LANGUAGE_TAGALOG,
             self::HOME_LANGUAGE_TAMIL,
-            self::HOME_LANGUAGE_TELEGU,
+            self::HOME_LANGUAGE_TELUGU,
             self::HOME_LANGUAGE_THAI,
             self::HOME_LANGUAGE_TIGRINYA,
             self::HOME_LANGUAGE_TURKISH,
