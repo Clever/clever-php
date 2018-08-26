@@ -17,13 +17,10 @@ jobs:
         command: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
         name: Set up CircleCI artifacts directories
     - run: curl -sS https://getcomposer.org/installer | php
-    - run: php composer.phar install --prefer-dist --no-interaction --no-progress
-    - run: ./vendor/bin/phpunit
     - run:
         command: |-
-          cd /tmp/ && wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
           sudo apt-get update
-          sudo apt-get install python-dev
-          sudo pip install --upgrade awscli && aws --version
-          pip install --upgrade --user awscli
-        name: Install awscli for ECR publish
+          sudo apt-get install php5-curl
+        name: apt-get install
+    - run: php composer.phar install --prefer-dist --no-interaction --no-progress
+    - run: ./vendor/bin/phpunit
