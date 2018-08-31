@@ -69,10 +69,11 @@ Returns a specific student contact
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -117,10 +118,11 @@ Returns a list of student contacts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -169,10 +171,11 @@ Returns the contacts for a student
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -223,10 +226,11 @@ Returns a specific course
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -271,10 +275,10 @@ Returns the course for a section
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -319,10 +323,11 @@ Returns a list of courses
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -371,10 +376,11 @@ Returns a specific district
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -419,10 +425,11 @@ Returns a specific district admin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -467,10 +474,11 @@ Returns a list of district admins
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -519,10 +527,11 @@ Returns the district for a student contact
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -567,10 +576,11 @@ Returns the district for a course
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -615,10 +625,11 @@ Returns the district for a district admin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -663,10 +674,11 @@ Returns the district for a school
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -711,10 +723,11 @@ Returns the district for a school admin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -759,10 +772,11 @@ Returns the district for a section
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -807,10 +821,11 @@ Returns the district for a student
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -855,10 +870,11 @@ Returns the district for a teacher
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -903,10 +919,11 @@ Returns the district for a term
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -951,10 +968,11 @@ Returns a list of districts
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 try {
     $result = $api_instance->getDistricts();
@@ -995,10 +1013,11 @@ Returns a specific school
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -1043,10 +1062,11 @@ Returns a specific school admin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -1091,10 +1111,11 @@ Returns a list of school admins
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -1143,10 +1164,11 @@ Returns the school for a section
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -1191,10 +1213,11 @@ Returns the primary school for a student
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -1239,10 +1262,11 @@ Retrieves school info for a teacher.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -1287,10 +1311,11 @@ Returns a list of schools
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -1339,10 +1364,11 @@ Returns the schools for a school admin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1393,10 +1419,11 @@ Returns the schools for a student
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1447,10 +1474,11 @@ Returns the schools for a teacher
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1501,10 +1529,11 @@ Returns a specific section
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -1549,10 +1578,11 @@ Returns a list of sections
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -1601,10 +1631,11 @@ Returns the sections for a Courses
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1655,10 +1686,11 @@ Returns the sections for a school
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1709,10 +1741,11 @@ Returns the sections for a student
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1763,10 +1796,11 @@ Returns the sections for a teacher
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1817,10 +1851,11 @@ Returns the sections for a term
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -1871,10 +1906,11 @@ Returns a specific student
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -1919,10 +1955,11 @@ Returns a list of students
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -1971,10 +2008,11 @@ Returns the students for a student contact
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -2025,10 +2063,11 @@ Returns the students for a school
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -2079,10 +2118,11 @@ Returns the students for a section
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -2133,10 +2173,11 @@ Returns the students for a teacher
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -2187,10 +2228,11 @@ Returns a specific teacher
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -2235,10 +2277,11 @@ Returns the primary teacher for a section
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -2283,10 +2326,11 @@ Returns a list of teachers
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
@@ -2335,10 +2379,11 @@ Returns the teachers for a school
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -2389,10 +2434,11 @@ Returns the teachers for a section
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -2443,10 +2489,11 @@ Returns the teachers for a student
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
@@ -2497,10 +2544,11 @@ Returns a specific term
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -2545,10 +2593,11 @@ Returns the term for a section
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -2593,10 +2642,11 @@ Returns a list of terms
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\DataApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
