@@ -20,10 +20,11 @@ Returns the specific event
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\EventsApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $id = "id_example"; // string | 
 
 try {
@@ -68,10 +69,11 @@ Returns a list of events
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure OAuth2 access token for authorization: oauth
-Clever\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$api_instance = new Clever\Api\DataApi();
 
-$api_instance = new Clever\Api\EventsApi(new \Http\Adapter\Guzzle6\Client());
+// Configure OAuth2 access token for authorization: oauth
+$api_instance->getConfig()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $limit = 56; // int | 
 $starting_after = "starting_after_example"; // string | 
 $ending_before = "ending_before_example"; // string | 
