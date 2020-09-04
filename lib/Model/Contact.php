@@ -208,6 +208,7 @@ class Contact implements ModelInterface, ArrayAccess
     const PHONE_TYPE_OTHER = 'Other';
     const PHONE_TYPE_EMPTY = '';
     const RELATIONSHIP_PARENT = 'Parent';
+    const RELATIONSHIP_GUARDIAN = 'Guardian';
     const RELATIONSHIP_GRANDPARENT = 'Grandparent';
     const RELATIONSHIP_SELF = 'Self';
     const RELATIONSHIP_AUNTUNCLE = 'Aunt/Uncle';
@@ -249,6 +250,7 @@ class Contact implements ModelInterface, ArrayAccess
     {
         return [
             self::RELATIONSHIP_PARENT,
+            self::RELATIONSHIP_GUARDIAN,
             self::RELATIONSHIP_GRANDPARENT,
             self::RELATIONSHIP_SELF,
             self::RELATIONSHIP_AUNTUNCLE,
