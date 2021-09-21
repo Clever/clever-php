@@ -80,7 +80,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://api.clever.com/v2.0';
+    protected $host = 'https://api.clever.com/v2.1';
 
     /**
      * User agent of the HTTP request, set to "PHP-Swagger" by default
