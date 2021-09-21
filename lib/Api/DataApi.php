@@ -8181,6 +8181,15 @@ class DataApi
                 }
             }
 
+            if ($response->getStatusCode() === 200) {
+                $content->data = array_filter($content->data, function ($item) {
+                    if (!$item->data->grade && $item->data->id) {
+                        echo "Skipping section {$item->data->id}, has empty grade.\n";
+                    }
+                    return $item->data && $item->data->id && $item->data->grade;
+                });
+            }
+
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
