@@ -8120,11 +8120,16 @@ class DataApi
      *
      * @throws \Clever\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Clever\Model\SectionsResponse
+     * @return \Clever\Model\SectionsResponse|array
      */
-    public function getSections($limit = null, $starting_after = null, $ending_before = null)
+    public function getSections($limit = null, $starting_after = null, $ending_before = null, $returnSkipped = false)
     {
-        list($response) = $this->getSectionsWithHttpInfo($limit, $starting_after, $ending_before);
+        list($response, $statusCode, $headers, $skippedItems) = $this->getSectionsWithHttpInfo($limit, $starting_after, $ending_before);
+
+        if ($returnSkipped) {
+            return [$response, $skippedItems];
+        }
+
         return $response;
     }
 
@@ -8181,19 +8186,23 @@ class DataApi
                 }
             }
 
+            $skippedItems = [];
             if ($response->getStatusCode() === 200) {
-                $content->data = array_filter($content->data, function ($item) {
-                    if (!$item->data->grade && $item->data->id) {
-                        echo "Skipping section {$item->data->id}, has empty grade.\n";
+                $content->data = array_filter($content->data, function ($item) use (&$skippedItems) {
+                    if (!$item->data || !$item->data->id || !$item->data->grade) {
+                        $skippedItems[] = $item;
+                        return false;
                     }
-                    return $item->data && $item->data->id && $item->data->grade;
+
+                    return true;
                 });
             }
 
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
-                $response->getHeaders()
+                $response->getHeaders(),
+                $skippedItems,
             ];
 
         } catch (ApiException $e) {
